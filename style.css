@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #070606;
+}
+.navigation{
+    display: flex;
+}
+
+.big-h{
+    font-family: 'Public Sans', sans-serif;
+    color: #D4D0C5;
+}
+.login-h{
+    font-family: 'Abhaya Libre', serif;
+    color: #070606;
+}
+

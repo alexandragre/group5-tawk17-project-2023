@@ -3,7 +3,7 @@ include_once 'header.php';
 ?>
 
 <section class="login-form">
-    <h2>Login</h2>
+    <h2 class="login-h">Login</h2>
     <form action="login.inc.php" method="post">
     <input type="text" name="name" placerholder="username">
     <input type="text" name="pwd" placerholder="password">
