@@ -17,10 +17,7 @@ a{
 .big-h{
     font-family: 'Public Sans', sans-serif;
     color: #D4D0C5;
-}
-.login-h{
-    font-family: 'Abhaya Libre', serif;
-    color: #070606;
+    font-size: 6em;
 }
 
 /* NAV */
@@ -33,7 +30,7 @@ a{
   left: 39px;
   font-family: Abhaya Libre;
   font-weight: Bold;
-  font-size: 50px;
+  font-size: 38px;
   opacity: 1;
 }
 
