@@ -25,7 +25,6 @@ a{
 }
 
 /* NAV */
-
 .sipper-logo {
   width: 269px;
   color: rgba(210,207,198,1);
@@ -61,8 +60,6 @@ a{
     left: 14px;
     border: none;
 }
-
-
 .profile-container {
     width: 55px;
     height: 57px;
@@ -73,7 +70,6 @@ a{
     left: 1183px;
     border: none;
 }
-
 .profile-img {
     width: 26px;
     height: 26px;
@@ -85,8 +81,7 @@ a{
     top: 15px;
     left: 14px;
     border: none;
-}
-  
+} 
 
 
 /* EDIT PAGE */
@@ -94,7 +89,7 @@ a{
     color: #D4D0C5;
     border: solid 1px #D4D0C5;
     border-radius: 18px;
-    padding: 15px 32px;
+    padding: 12px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -102,7 +97,7 @@ a{
     font-family: 'Public Sans', sans-serif;
     margin: 4px 2px;
     cursor: pointer;
-    margin-top: 60px;
+    margin-top: 160px;
 }
 .edit-overview{
     width: 95%;
@@ -138,10 +133,31 @@ a{
 .recipes-overview{
     display: flex;
 }
+table {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    padding: 10px;
+}
+tr {
+    padding-top: 10px;
+    border-bottom: 1px solid #D4D0C5;
+}
+th {
+    font-size: 20px;
+    color: #D4D0C5;
+}
+th, td{
+    border: none;
+    height: 30px;
+    padding: 10px;
+}
+th:nth-child(3) {
+    text-align: center;
+}
 
 
 /* CREATE PAGE */
-
 h1 {
     width: 710px;
     color: rgba(212,208,197,1);
@@ -154,7 +170,6 @@ h1 {
     opacity: 1;
     text-align: left;
 }
-
 .drink-text {
     width: 143px;
     color: rgba(210,207,198,1);
@@ -164,10 +179,8 @@ h1 {
     font-family: Public Sans;
     font-weight: Medium;
     font-size: 16px;
-    text-align: left;
-    
+    text-align: left; 
 }
-
 #drink-input{
     width: 506px;
     height: 50px;
@@ -178,8 +191,6 @@ h1 {
     border: 1px solid rgba(210,207,198,1);
     border-radius: 25px;
 }
-
-
 .description-text {
     width: 143px;
     color: rgba(210,207,198,1);
@@ -189,10 +200,8 @@ h1 {
     font-family: Public Sans;
     font-weight: Medium;
     font-size: 16px;
-    text-align: left;
-    
+    text-align: left;  
 }
-
 #description{
     width: 506px;
     height: 50px;
@@ -203,8 +212,6 @@ h1 {
     border: 1px solid rgba(210,207,198,1);
     border-radius: 25px;
 }
-
-
 .ingridients-text {
     width: 143px;
     color: rgba(210,207,198,1);
@@ -214,10 +221,8 @@ h1 {
     font-family: Public Sans;
     font-weight: Medium;
     font-size: 16px;
-    text-align: left;
-    
+    text-align: left;   
 }
-
 #ingridients{
     width: 506px;
     height: 194px;
@@ -227,9 +232,7 @@ h1 {
     left: 40px;
     border: 1px solid rgba(210,207,198,1);
     border-radius: 25px;
-  
 }
-
 .input-create {
     width: 506px;
     height: 58px;
@@ -243,8 +246,6 @@ h1 {
     font-weight: Medium;
     font-size: 16px;
 }
-
-
 .share-img-container {
     width: 575px;
     height: 748px;
@@ -255,7 +256,6 @@ h1 {
     left: 663px;
     border-radius: 20px;
 }
-
 .share-img {
     width: 245px;
     height: 58px;
