@@ -12,8 +12,12 @@ a{
 }
 .navigation{
     display: flex;
+    width: 90%;
+    margin: 0 auto;
 }
-
+.fa fa-bell-o{
+    font-size: 30px;
+}
 .big-h{
     font-family: 'Public Sans', sans-serif;
     color: #D4D0C5;
@@ -30,7 +34,7 @@ a{
   left: 39px;
   font-family: Abhaya Libre;
   font-weight: Bold;
-  font-size: 38px;
+  font-size: 30px;
   opacity: 1;
 }
 
