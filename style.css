@@ -35,6 +35,26 @@ h1 {
     top: 168px;
     left: 38px;
 }
+
+h2 {
+    width: 365px;
+    color: rgba(212,208,197,1);
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgba(212,208,197,1);
+    padding-bottom: 20px;
+    position: absolute;
+    top: 565px;
+    left: 38px;
+    font-family: Public Sans;
+    font-weight: Medium;
+    font-size: 36px;
+    opacity: 1;
+    text-align: left;
+}
+
+
+
 /* NAV */
 .sipper-logo {
   width: 269px;
@@ -309,4 +329,16 @@ th:nth-child(3) {
     margin-right: 16px;
     font-size: 17px;
   }
+
+.small-text {
+    width: 378px;
+    color: rgba(212,208,197,1);
+    position: absolute;
+    top: 348px;
+    left: 860px;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
 
