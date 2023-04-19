@@ -38,8 +38,7 @@ a{
 }
 
 .notification-container {
-    width: 55px;
-    height: 57px;
+    padding: 25px 25px;
     background: rgba(210,207,198,1);
     position: absolute;
     border-radius: 10px;
@@ -61,8 +60,7 @@ a{
     border: none;
 }
 .profile-container {
-    width: 55px;
-    height: 57px;
+    padding: 25px 25px;
     background: rgba(193,109,41,1);
     position: absolute;
     border-radius: 10px;
