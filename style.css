@@ -36,7 +36,6 @@ a{
   font-size: 30px;
   opacity: 1;
 }
-
 .notification-container {
     padding: 25px 25px;
     background: rgba(210,207,198,1);
@@ -46,7 +45,6 @@ a{
     left: 1117px;
     border: none;
 }
-
 .notification-img {
     width: 26px;
     height: 26px;
@@ -158,17 +156,36 @@ th:nth-child(3) {
 
 
 /* CREATE PAGE */
+.landing-page{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 130px;
+}
 h1 {
     width: 710px;
     color: rgba(212,208,197,1);
     position: absolute;
-    top: 168px;
-    left: 38px;
     font-family: Public Sans;
     font-weight: Bold;
     font-size: 128px;
     opacity: 1;
-    text-align: left;
+    float: left;
+}
+.search-container{
+    float: right;
+    width: 25%;
+}
+.search-container input[type=text] {
+    border: 1px solid #D4D0C5;  
+    background-color: #D4D0C5;
+    color: #070606;
+    padding: 14px 100px;
+    border-radius: 20px;
+  }
+.intro-text{
+    color: #D4D0C5;
+    font-size: 18px;
+    margin-top: 30px;
 }
 .drink-text {
     width: 143px;

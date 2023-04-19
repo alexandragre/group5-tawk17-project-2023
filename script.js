@@ -12,6 +12,23 @@ function validateForm() {
     }
   }
 
+// API ninja cocktail
+let options = {
+  method: 'GET',
+  headers: { 'x-api-key': 'myKey' }
+}
+
+let url = 'https://api.api-ninjas.com/v1/cocktail?name='
+
+
+fetch(url,options)
+      .then(res => res.json()) // parse response as JSON
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => {
+          console.log(`error ${err}`)
+      });
 
 // get recipes
 
