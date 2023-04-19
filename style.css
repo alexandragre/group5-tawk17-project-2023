@@ -24,6 +24,17 @@ a{
     font-size: 6em;
 }
 
+h1 {
+    width: 710px;
+    color: rgba(212,208,197,1);
+    position: absolute;
+    font-family: Public Sans;
+    font-weight: Bold;
+    font-size: 128px;
+    float: left;
+    top: 168px;
+    left: 38px;
+}
 /* NAV */
 .sipper-logo {
   width: 269px;
@@ -161,16 +172,7 @@ th:nth-child(3) {
     margin: 0 auto;
     padding-top: 130px;
 }
-h1 {
-    width: 710px;
-    color: rgba(212,208,197,1);
-    position: absolute;
-    font-family: Public Sans;
-    font-weight: Bold;
-    font-size: 128px;
-    opacity: 1;
-    float: left;
-}
+
 .search-container{
     float: right;
     width: 25%;
@@ -285,3 +287,26 @@ h1 {
     border: 2px solid rgba(0,0,0,1);
     border-radius: 100px;
 }
+
+/* LANDING PAGE */ 
+
+.search-bar {
+    overflow: hidden;
+    background-color: rgba(210,207,198,1);
+    width: 378px;
+    height: 58px;
+    position: absolute;
+    top: 219px;
+    left: 860px;
+    border-radius: 25px;
+  }
+
+.search-bar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
