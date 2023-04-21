@@ -42,7 +42,7 @@ h2 {
     border-bottom-style: solid;
     border-width: 1px;
     border-color: rgba(212,208,197,1);
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     position: absolute;
     top: 565px;
     left: 38px;
@@ -50,6 +50,19 @@ h2 {
     font-weight: Medium;
     font-size: 36px;
     opacity: 1;
+    text-align: left;
+}
+
+
+h3 {
+    width: 382px;
+    color: rgba(212,208,197,1);
+    position: absolute;
+    top: 634px;
+    left: 39px;
+    font-family: Public Sans;
+    font-weight: Medium;
+    font-size: 20px;
     text-align: left;
 }
 
@@ -342,3 +355,42 @@ th:nth-child(3) {
 }
 
 
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.img-grid {
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.img1 {
+    width: 383px;
+    height: 500px;
+    background: url(../images/v85_23.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 718px;
+    left: 38px;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.img2 {
+    width: 383px;
+    height: 500px;
+    background: url(../images/v85_21.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 718px;
+    left: 445px;
+    border-radius: 20px;
+}
