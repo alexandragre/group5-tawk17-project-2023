@@ -18,110 +18,151 @@ a{
 .fa fa-bell-o{
     font-size: 30px;
 }
+
+
+/* NAV */
+.sipper-logo {
+    width: 269px;
+    color: rgba(210,207,198,1);
+    position: absolute;
+    top: 37px;
+    left: 39px;
+    font-family: Abhaya Libre;
+    font-weight: Bold;
+    font-size: 30px;
+    opacity: 1;
+  }
+  .notification-container {
+      padding: 25px 25px;
+      background: rgba(210,207,198,1);
+      position: absolute;
+      border-radius: 10px;
+      top: 40px;
+      left: 1117px;
+      border: none;
+  }
+  .notification-img {
+      width: 26px;
+      height: 26px;
+      background: url("../images/v114_17.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      top: 15px;
+      left: 14px;
+      border: none;
+  }
+  .profile-container {
+      padding: 25px 25px;
+      background: rgba(193,109,41,1);
+      position: absolute;
+      border-radius: 10px;
+      top: 40px;
+      left: 1183px;
+      border: none;
+  }
+  .profile-img {
+      width: 26px;
+      height: 26px;
+      background: url("../images/v106_40.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      top: 15px;
+      left: 14px;
+      border: none;
+  } 
+  
+
+/* INDEX*/
+.landing-page{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 130px;
+    display: flex;
+}
+.search-container input[type=text] {
+    border: 1px solid #D4D0C5;  
+    background-color: #D4D0C5;
+    color: #070606;
+    padding: 14px 100px;
+    border-radius: 20px;
+  }
+.heading{
+    padding-right: 320px;
+}
 .big-h{
     font-family: 'Public Sans', sans-serif;
     color: #D4D0C5;
     font-size: 6em;
 }
-
-h1 {
-    width: 710px;
-    color: rgba(212,208,197,1);
-    position: absolute;
-    font-family: Public Sans;
-    font-weight: Bold;
-    font-size: 128px;
-    float: left;
-    top: 168px;
-    left: 38px;
+.intro-text{
+    color: #D4D0C5;
+    font-size: 18px;
+    margin-top: 30px;
 }
-
-h2 {
-    width: 365px;
-    color: rgba(212,208,197,1);
-    border-bottom-style: solid;
-    border-width: 1px;
-    border-color: rgba(212,208,197,1);
-    padding-bottom: 10px;
-    position: absolute;
-    top: 565px;
-    left: 38px;
-    font-family: Public Sans;
-    font-weight: Medium;
-    font-size: 36px;
-    opacity: 1;
-    text-align: left;
+.search-container{
+    width: 350px;
 }
-
-
-h3 {
-    width: 382px;
-    color: rgba(212,208,197,1);
+.search-bar {
+    overflow: hidden;
+    background-color: rgba(210,207,198,1);
+    width: 378px;
+    height: 58px;
     position: absolute;
-    top: 634px;
-    left: 39px;
-    font-family: Public Sans;
-    font-weight: Medium;
-    font-size: 20px;
-    text-align: left;
-}
-
-
-
-/* NAV */
-.sipper-logo {
-  width: 269px;
-  color: rgba(210,207,198,1);
-  position: absolute;
-  top: 37px;
-  left: 39px;
-  font-family: Abhaya Libre;
-  font-weight: Bold;
-  font-size: 30px;
-  opacity: 1;
-}
-.notification-container {
-    padding: 25px 25px;
-    background: rgba(210,207,198,1);
-    position: absolute;
-    border-radius: 10px;
-    top: 40px;
-    left: 1117px;
+    top: 219px;
+    left: 860px;
+    border-radius: 25px;
+  }
+.search-bar input[type=text] {
+    float: right;
+    padding: 6px;
     border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+.grid-container {
+    margin: 30px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
 }
-.notification-img {
-    width: 26px;
-    height: 26px;
-    background: url("../images/v114_17.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: 15px;
-    left: 14px;
-    border: none;
+.grid-container > article img {
+    width: 100%;
+    margin: auto;
 }
-.profile-container {
-    padding: 25px 25px;
-    background: rgba(193,109,41,1);
-    position: absolute;
-    border-radius: 10px;
-    top: 40px;
-    left: 1183px;
-    border: none;
+.drink-img{
+    margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
+    border-radius: 35px;
 }
-.profile-img {
-    width: 26px;
-    height: 26px;
-    background: url("../images/v106_40.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: 15px;
-    left: 14px;
-    border: none;
-} 
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.drink-card{
+    margin-bottom: 25px;
+}
+.drink-h{
+    font-size: 1.5em;
+    color: #D4D0C5;
+    font-family: 'Public Sans', sans-serif;
+    border-bottom: 2px solid #D4D0C5;
+    margin: 10px 0px 10px 0px;
+}
+.drink-p {
+    font-size: 1em;
+    color: #D4D0C5;
+    font-family: 'Public Sans', sans-serif;
+  }
 
 
 /* EDIT PAGE */
@@ -200,28 +241,6 @@ th:nth-child(3) {
 
 
 /* CREATE PAGE */
-.landing-page{
-    width: 95%;
-    margin: 0 auto;
-    padding-top: 130px;
-}
-
-.search-container{
-    float: right;
-    width: 25%;
-}
-.search-container input[type=text] {
-    border: 1px solid #D4D0C5;  
-    background-color: #D4D0C5;
-    color: #070606;
-    padding: 14px 100px;
-    border-radius: 20px;
-  }
-.intro-text{
-    color: #D4D0C5;
-    font-size: 18px;
-    margin-top: 30px;
-}
 .drink-text {
     width: 143px;
     color: rgba(210,207,198,1);
@@ -323,26 +342,6 @@ th:nth-child(3) {
 
 /* LANDING PAGE */ 
 
-.search-bar {
-    overflow: hidden;
-    background-color: rgba(210,207,198,1);
-    width: 378px;
-    height: 58px;
-    position: absolute;
-    top: 219px;
-    left: 860px;
-    border-radius: 25px;
-  }
-
-.search-bar input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-  }
-
 .small-text {
     width: 378px;
     color: rgba(212,208,197,1);
@@ -355,11 +354,6 @@ th:nth-child(3) {
 }
 
 
-.img-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
 
 .img-grid {
     flex: 50%;
