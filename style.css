@@ -10,71 +10,49 @@ body {
 a{
     text-decoration: none;
 }
-.navigation{
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-}
-.fa fa-bell-o{
-    font-size: 30px;
-}
-
 
 /* NAV */
+.navigation{
+    margin-top: 10px;
+    width: 95%;
+    margin: 0 auto;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}  
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #D4D0C5;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+i{
+    color: #070606;
+}
+.icon-con1{
+    float: right;
+    padding: 8px 4px;
+    background-color: #C16D29;
+    border-radius: 15px;
+}
+.icon-con2{
+    float: right;
+    padding: 8px 4px;
+    background-color: #D4D0C5;
+    border-radius: 15px;
+    margin-right: 10px;
+}
 .sipper-logo {
-    width: 269px;
-    color: rgba(210,207,198,1);
-    position: absolute;
-    top: 37px;
-    left: 39px;
+    color:#D4D0C5;
     font-family: Abhaya Libre;
-    font-weight: Bold;
-    font-size: 30px;
-    opacity: 1;
+    font-size: 2em;
+    font-weight: 600;
   }
-  .notification-container {
-      padding: 25px 25px;
-      background: rgba(210,207,198,1);
-      position: absolute;
-      border-radius: 10px;
-      top: 40px;
-      left: 1117px;
-      border: none;
-  }
-  .notification-img {
-      width: 26px;
-      height: 26px;
-      background: url("../images/v114_17.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      position: absolute;
-      top: 15px;
-      left: 14px;
-      border: none;
-  }
-  .profile-container {
-      padding: 25px 25px;
-      background: rgba(193,109,41,1);
-      position: absolute;
-      border-radius: 10px;
-      top: 40px;
-      left: 1183px;
-      border: none;
-  }
-  .profile-img {
-      width: 26px;
-      height: 26px;
-      background: url("../images/v106_40.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      position: absolute;
-      top: 15px;
-      left: 14px;
-      border: none;
-  } 
-  
 
 /* INDEX*/
 .landing-page{
@@ -91,7 +69,7 @@ a{
     border-radius: 20px;
   }
 .heading{
-    padding-right: 320px;
+    padding-right: 470px;
 }
 .big-h{
     font-family: 'Public Sans', sans-serif;
