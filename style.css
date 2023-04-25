@@ -13,7 +13,7 @@ a{
 
 /* NAV */
 .navigation{
-    margin-top: 10px;
+    padding-top: 10px;
     width: 95%;
     margin: 0 auto;
 }
@@ -36,16 +36,19 @@ i{
 }
 .icon-con1{
     float: right;
-    padding: 8px 4px;
+    padding: 3px 2px;
     background-color: #C16D29;
     border-radius: 15px;
 }
 .icon-con2{
     float: right;
-    padding: 8px 4px;
+    padding: 3px 2px;
     background-color: #D4D0C5;
     border-radius: 15px;
     margin-right: 10px;
+}
+.fa-solid{
+    font-size: 20px;
 }
 .sipper-logo {
     color:#D4D0C5;
@@ -58,7 +61,7 @@ i{
 .landing-page{
     width: 95%;
     margin: 0 auto;
-    padding-top: 130px;
+    padding: 70px 0px;
     display: flex;
 }
 .search-container input[type=text] {
@@ -105,8 +108,8 @@ i{
 .grid-container {
     margin: 30px 40px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px 30px;
     align-items: center;
     justify-content: center;
     place-items: center;
@@ -117,8 +120,8 @@ i{
 }
 .drink-img{
     margin-bottom: 20px;
-    height: 100%;
-    width: 100%;
+    height: 450px;
+    width: 600px;
     border-radius: 35px;
 }
 .img-container {
@@ -127,7 +130,13 @@ i{
     padding: 0 4px;
 }
 .drink-card{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+}
+.flip-card{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
 }
 .drink-h{
     font-size: 1.5em;
@@ -141,6 +150,39 @@ i{
     color: #D4D0C5;
     font-family: 'Public Sans', sans-serif;
   }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+    
 
 
 /* EDIT PAGE */
