@@ -21,7 +21,7 @@ ul {
     list-style-type: none;
     overflow: hidden;
 }  
-li {
+.icon- {
     float: left;
 }
 li a {
@@ -179,27 +179,27 @@ i{
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+    border-radius: 35px;
+    background-color: #D4D0C5;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
-  
   .flip-card-back h3 {
-    margin-top: 0;
-  }
-  
+    margin: 18px 0px 18px 0px;
+  } 
   .flip-card-back ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-align: left;
   }
-  
   .flip-card-back li {
     margin-bottom: 10px;
   }
+.cocktail-h{
+    font-size: 1.5em;
+    font-family: 'Public Sans', sans-serif;
+}
 
 
 /* EDIT PAGE */
