@@ -72,12 +72,12 @@ i{
     border-radius: 20px;
   }
 .heading{
-    padding-right: 425px;
+    padding-right: 470px;
 }
 .big-h{
     font-family: 'Public Sans', sans-serif;
     color: #D4D0C5;
-    font-size: 6.5em;
+    font-size: 6em;
 }
 .intro-text{
     color: #D4D0C5;
@@ -129,15 +129,6 @@ i{
     flex-wrap: wrap;
     padding: 0 4px;
 }
-.drink-card{
-    margin-bottom: 15px;
-}
-.flip-card{
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-}
 .drink-h{
     font-size: 1.5em;
     color: #D4D0C5;
@@ -149,7 +140,15 @@ i{
     font-size: 1em;
     color: #D4D0C5;
     font-family: 'Public Sans', sans-serif;
+    margin-bottom: 20px;
   }
+  .flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 460px;
+    perspective: 1000px;
+  }
+  
   .flip-card-inner {
     position: relative;
     width: 100%;
@@ -157,7 +156,6 @@ i{
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
   .flip-card:hover .flip-card-inner {
@@ -168,21 +166,40 @@ i{
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
   
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
+  .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   .flip-card-back {
-    background-color: #2980b9;
-    color: white;
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
-    
+  
+  .flip-card-back h3 {
+    margin-top: 0;
+  }
+  
+  .flip-card-back ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .flip-card-back li {
+    margin-bottom: 10px;
+  }
 
 
 /* EDIT PAGE */
