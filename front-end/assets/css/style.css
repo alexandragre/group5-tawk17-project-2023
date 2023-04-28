@@ -108,7 +108,7 @@ i{
 .grid-container {
     margin: 30px 40px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px 30px;
     align-items: center;
     justify-content: center;
@@ -120,8 +120,8 @@ i{
 }
 .drink-img{
     margin-bottom: 20px;
-    height: 450px;
-    width: 600px;
+    height: 420px;
+    width: 450px;
     border-radius: 35px;
 }
 .img-container {
@@ -144,8 +144,8 @@ i{
   }
   .flip-card {
     background-color: transparent;
-    width: 320px;
-    height: 460px;
+    width: 420px;
+    height: 450px;
     perspective: 1000px;
   }
   
