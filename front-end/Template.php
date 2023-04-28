@@ -31,7 +31,11 @@ class Template
 
             <main>
 
-        <?php }
+       
+       
+       
+       
+    <?php }
 
 
 
