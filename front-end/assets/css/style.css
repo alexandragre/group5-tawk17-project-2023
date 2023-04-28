@@ -121,7 +121,7 @@ i{
 .drink-img{
     margin-bottom: 20px;
     height: 420px;
-    width: 450px;
+    width: 500px;
     border-radius: 35px;
 }
 .img-container {
@@ -145,7 +145,7 @@ i{
   .flip-card {
     background-color: transparent;
     width: 420px;
-    height: 450px;
+    height: 500px;
     perspective: 1000px;
   }
   
