@@ -1,12 +1,12 @@
 <?php
 require_once __DIR__ . "/../../Template.php";
 
-Template::header("Customers");
+Template::header("Cocktails");
 ?>
 
-<h1>Customers</h1>
+<h1>Cocktails</h1>
 
-<a href="<?= $this->home ?>/customers/new">Create new</a>
+<a href="<?= $this->home ?>/cocktails/new">Create new recipe</a>
 
 <div class="item-grid">
 
