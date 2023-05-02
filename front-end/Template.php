@@ -31,9 +31,7 @@ class Template
 
             <main>
 
-       
-       
-       
+    
        
     <?php }
 
