@@ -8,7 +8,7 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
 require_once __DIR__ . "/../RestAPI.php";
 require_once __DIR__ . "/../business-logic/CocktailsService.php";
 
-// Class for handling requests to "api/Customer"
+// Class for handling requests to "api/cocktail"
 
 class CocktailAPI extends RestAPI
 {

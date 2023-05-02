@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../../Template.php";
+require_once __DIR__ . "/../Template.php";
 
 Template::header("Cocktails");
 ?>
@@ -10,11 +10,11 @@ Template::header("Cocktails");
 
 <div class="item-grid">
 
-    <?php foreach ($this->model as $customer) : ?>
+    <?php foreach ($this->model as $cocktail) : ?>
 
         <article class="item">
             <div>
-                <b><?= $customer->customer_name ?></b> <br>
+                <b><?= $cocktail->cocktail_id ?></b> <br>
                 <span>Born: <?= $customer->birth_year ?></span> <br>
             </div>
 

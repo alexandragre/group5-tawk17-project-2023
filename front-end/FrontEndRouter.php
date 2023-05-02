@@ -6,7 +6,7 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
 }
 
 // Load functions file
-require_once __DIR__ . "/functions.php";
+require_once __DIR__ . "/../functions.php";
 
 // Load controllers
 require_once __DIR__ . "/controllers/CustomerController.php";

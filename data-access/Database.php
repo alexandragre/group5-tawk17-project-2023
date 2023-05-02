@@ -12,8 +12,8 @@ class Database
 {
     private $host = "localhost";
     private $user = "root";
-    private $pass = "";
-    private $db = "multitier_shop";
+    private $pass = "root";
+    private $db = "cocktail_db";
 
     protected $conn;
 

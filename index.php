@@ -5,8 +5,8 @@ define('MY_APP', true);
 
 
 // Load the routers responsible for handling API requests
-require_once __DIR__ . "/api/APIRouter.php";
-require_once __DIR__ . "/frontend/FrontendRouter.php";
+require_once __DIR__ . "/../APIRouter.php";
+require_once __DIR__ . "/../FrontEndRouter.php";
 
 // Get URL path
 // http://localhost/multitier-shop/[api/customers/5]
