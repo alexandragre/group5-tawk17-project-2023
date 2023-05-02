@@ -87,6 +87,18 @@ i{
 .search-container{
     width: 350px;
 }
+.add-btn{
+    padding: 18px 150px;
+    background-color: #070606;
+    border: 2px solid #D4D0C5;   
+    font-size: 1em;
+    border-radius: 25px;
+}
+a{
+    color: #D4D0C5;
+}
+
+/*
 .search-bar {
     overflow: hidden;
     background-color: rgba(210,207,198,1);
@@ -104,7 +116,7 @@ i{
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
-  }
+  }*/
 .grid-container {
     margin: 30px 40px;
     display: grid;

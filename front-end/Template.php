@@ -32,13 +32,13 @@ class Template
             <main>
 
             <div class="landing-page">
-<article class="heading">
-    <h1 class="big-h">DRINKS & <br> COCKTAILS</h1>
-</article>
+                <article class="heading">
+                    <h1 class="big-h">DRINKS & <br> COCKTAILS</h1>
+                </article>
 
-    <article class="search-container">
-    <input type="text" placeholder="Search for recipe">
-    <p class="intro-text">
+                <article class="search-container">
+                <button class="add-btn"><a href="new-cocktail.php">Add</a></button>   
+             <p class="intro-text">
         With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game.
     </p>
     </article>
