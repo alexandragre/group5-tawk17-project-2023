@@ -3,4 +3,4 @@
 $serverName = "localhost";
 $dbName = "root";
 $dbPassword = "root";
-$db = "";
+$db = "cocktails_db";
