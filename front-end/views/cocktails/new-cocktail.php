@@ -7,7 +7,7 @@ Template::header("New Cocktail");
 <section class="share-container">
     <h1>SHARE & TEST</h1>
 
-    <form action="/action_page.php">
+    <form action="create-cocktail.php" method="post" name="AddForm" onsubmit="return validateForm()">
         <label for="drink-text" class="drink-text">Drink name</label>
         <input type="text" id="drink-input" name="drink-input">
         <br><br>
@@ -24,13 +24,5 @@ Template::header("New Cocktail");
 <section class="share-img-container">
 <button class="share-img">Add Image</button>
 </section>
-
-<!-- From Linus 
-<form action="<?= $this->home ?>/customers" method="post">
-    <input type="text" name="customer_name" placeholder="Name"> <br>
-    <input type="text" name="birth_year" placeholder="Birth year"> <br>
-    <input type="submit" value="Save" class="btn">
-</form>
--->
 
 <?php Template::footer(); ?>

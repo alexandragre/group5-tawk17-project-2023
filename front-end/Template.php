@@ -17,6 +17,7 @@ class Template
             <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&family=Public+Sans:wght@500;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="<?= $home_path ?>/assets/css/style.css">
+            <script src="script.js"></script>
             <title>Sipper drink recipes website</title>
         </head>
 
@@ -37,7 +38,7 @@ class Template
                 </article>
 
                 <article class="search-container">
-                <button class="add-btn"><a href="new-cocktail.php">Add</a></button>   
+                <button class="add-btn"><a href="new.php">Add</a></button>   
              <p class="intro-text">
         With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game.
     </p>
