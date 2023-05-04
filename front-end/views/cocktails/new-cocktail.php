@@ -1,4 +1,7 @@
 <?php
+
+include_once "create-cocktail.php";
+
 require_once __DIR__ . "/../Template.php";
 
 Template::header("New Cocktail");

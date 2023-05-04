@@ -5,6 +5,7 @@ class Template
     public static function header($title)
     {
         $home_path = getHomePath();
+        $new_path = getNewPath();
         ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -17,10 +18,9 @@ class Template
             <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&family=Public+Sans:wght@500;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="<?= $home_path ?>/assets/css/style.css">
-            <script src="script.js"></script>
+            <script src="js/script.js"></script>
             <title>Sipper drink recipes website</title>
         </head>
-
 
             <nav class="navigation">
                 <ul>
@@ -29,7 +29,6 @@ class Template
                 <li class="icon-con2"><a href="#"><i class="fa fa-bell" style="font-size:22px"></i></a></li>
                 </ul>
             </nav>
-
             <main>
 
             <div class="landing-page">
@@ -38,7 +37,7 @@ class Template
                 </article>
 
                 <article class="search-container">
-                <button class="add-btn"><a href="new-cocktail.php">Add</a></button>   
+                <button class="add-btn"><a href="new-cocktail.php"<?php $new_path = getNewPath();?>>Add</a></button>   
              <p class="intro-text">With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game. </p>
     </article>
 </div>
