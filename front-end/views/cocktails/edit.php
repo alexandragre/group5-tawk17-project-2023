@@ -9,7 +9,7 @@ Template::header("Edit " . $this->model->title);
 <form action="<?= $this->home ?>/cocktails/<?= $this->model->cocktail_id ?>/edit" method="post">
     <input type="text" name="title" value="<?= $this->model->title ?>" placeholder="Title"> <br>
     <input type="text" name="description" value="<?= $this->model->description ?>" placeholder="Description"> <br>
-    <input type="text" name="ingridients" value="<?= $this->model->ingridients ?>" placeholder="Ingridients"> <br>
+    <input type="text" name="ingredients" value="<?= $this->model->ingredients ?>" placeholder="Ingridients"> <br>
     <input type="text" name="instructions" value="<?= $this->model->instructions ?>" placeholder="Instructions"> <br>
     <input type="text" name="image" value="<?= $this->model->image ?>" placeholder="image"> <br>
 
