@@ -39,9 +39,7 @@ class Template
 
                 <article class="search-container">
                 <button class="add-btn"><a href="new.php">Add</a></button>   
-             <p class="intro-text">
-        With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game.
-    </p>
+             <p class="intro-text">With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game. </p>
     </article>
 </div>
 

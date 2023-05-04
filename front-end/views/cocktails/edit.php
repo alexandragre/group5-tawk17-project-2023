@@ -11,6 +11,8 @@ Template::header("Edit " . $this->model->title);
     <input type="text" name="description" value="<?= $this->model->description ?>" placeholder="Description"> <br>
     <input type="text" name="ingridients" value="<?= $this->model->ingridients ?>" placeholder="Ingridients"> <br>
     <input type="text" name="instructions" value="<?= $this->model->instructions ?>" placeholder="Instructions"> <br>
+    <input type="text" name="image" value="<?= $this->model->image ?>" placeholder="image"> <br>
+
     <input type="submit" value="Save" class="btn">
 </form>
 

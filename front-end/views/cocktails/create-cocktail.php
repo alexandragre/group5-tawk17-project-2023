@@ -9,14 +9,14 @@ Template::header("New Cocktail");
 // Get post data
 $title = $_POST["title"];
 $description = $_POST["description"];
-$ingridients = $_POST["ingridients"];
+$ingredients = $_POST["ingredients"];
 $instructions = $_POST["instructions"];
 $image_url = $_POST["image_url"];
 
 // Skickar data till Databasen 
-$query = "INSERT INTO cocktails (title, description, ingridients, instructions, image_url) VALUES (?, ?, ?, ?, ?)"; // Create the query (command) for the database
+$query = "INSERT INTO cocktails (title, description, ingredients, instructions, image_url) VALUES (?, ?, ?, ?, ?)"; // Create the query (command) for the database
 $stmt = $conn->prepare($query); // Prepare the query for execution
-$stmt->bind_param("ssssi", $title, $description, $ingridients, $instructions, $image_url); // Add values to query
+$stmt->bind_param("ssssi", $title, $description, $ingredients, $instructions, $image_url); // Add values to query
 
 $success = $stmt->execute(); // Execute command / query
 
