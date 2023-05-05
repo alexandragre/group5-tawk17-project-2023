@@ -13,7 +13,7 @@ require_once __DIR__ . "/../models/CocktailModel.php";
 class CocktailsDatabase extends Database
 {
     private $table_name = "cocktails";
-    private $id_name = "cocktails_id";
+    private $id_name = "cocktail_id";
 
     // Get one customer by using the inherited function getOneRowByIdFromTable
     public function getOne($cocktail_id)
