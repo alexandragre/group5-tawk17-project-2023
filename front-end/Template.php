@@ -25,19 +25,18 @@ class Template
             <nav class="navigation">
                 <ul>
                 <li class="icon-"><a href="index.html" class="sipper-logo">Sipper</a></li>
-                <li class="icon-con1"><a href="#"><i class="fa fa-fw fa-user" style="font-size:22px"></i></a></li>
-                <li class="icon-con2"><a href="#"><i class="fa fa-bell" style="font-size:22px"></i></a></li>
+                <li class="icon-con1"><a href="<?= $home_path ?>">Start</a>
+                <li class="icon-con2"><a href="<?= $home_path ?>/cocktails">Cocktails</a></li>
+                <li class="icon-con3"><a href="<?= $home_path ?>/articles">Articles</a></li>
                 </ul>
             </nav>
             <main>
 
-                <a href="<?= $home_path ?>">Start</a>
-                <a href="<?= $home_path ?>/cocktails">Cocktails</a>
-                <a href="<?= $home_path ?>/articles">Articles</a>
-               
-</div>
-
-    
+            <div class="landing-page">
+                <article class="heading">
+                    <h1 class="big-h">DRINKS & <br> COCKTAILS</h1>
+                </article>               
+            </div>
        
     <?php }
 

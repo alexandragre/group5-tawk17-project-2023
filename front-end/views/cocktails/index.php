@@ -4,26 +4,14 @@ require_once __DIR__ . "/../../Template.php";
 Template::header("Cocktails");
 ?>
 
-<h1>Cocktails</h1>
-
-
 <div class="landing-page">
-                <article class="heading">
-                    <h1 class="big-h">DRINKS & <br> COCKTAILS</h1>
-                </article>
-
-                
-<a href="<?= $this->home ?>/cocktails/new">Create new recipe</a>
-
-<div class="item-grid">
-
-
+             
 <article class="search-container">
-                <button class="add-btn"><a href="<?= $this->home ?>/cocktails/new">Add</a></button>   
-             <p class="intro-text">With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game. </p>
+                <button class="add-btn"><a href="<?= $this->home ?>/cocktails/new">Create new recipe</a></button>   
     </article>
 
-    
+    <div class="item-grid">
+
     <?php foreach ($this->model as $cocktail) : ?>
 
         <article class="item">
@@ -43,5 +31,6 @@ Template::header("Cocktails");
     <?php endforeach; ?>
 
 </div>
+    </div>
 
 <?php Template::footer(); ?>
