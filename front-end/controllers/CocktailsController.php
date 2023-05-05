@@ -112,7 +112,7 @@ class CocktailsController extends ControllerBase
     {
         // Get the customer with the specified ID
         $id = $this->path_parts[2];
-        $cocktail = CustomersService::getCocktailById($id);
+        $cocktail = CocktailsService::getCocktailById($id);
 
         // Show not found if customer doesn't exist
         if ($cocktail == null) {
@@ -129,21 +129,21 @@ class CocktailsController extends ControllerBase
         // Path count is 2 meaning the current URL must be "/home/customers"
         // Create a customer
         if ($this->path_count == 2) {
-            $this->createCustomer();
+            $this->createCocktail();
         }
 
         // Path count is 4 meaning the current URL must be "/home/customers/{SOMETHING1}/{SOMETHING2}"
         // {SOMETHING1} is probably the customer_id
         // if {SOMETHING2} is "edit" we will update the user
         else if ($this->path_count == 4 && $this->path_parts[3] == "edit") {
-            $this->updateCustomer();
+            $this->updateCocktail();
         }
 
         // Path count is 4 meaning the current URL must be "/home/customers/{SOMETHING1}/{SOMETHING2}"
         // {SOMETHING1} is probably the customer_id
         // if {SOMETHING2} is "edit" we will show the edit form
         else if ($this->path_count == 4 && $this->path_parts[3] == "delete") {
-            $this->deleteCustomer();
+            $this->deleteCocktail();
         }
 
         // Show "404 not found" if the path is invalid
@@ -154,20 +154,22 @@ class CocktailsController extends ControllerBase
 
 
     // Create a user with data from the URL and body
-    private function createCustomer()
+    private function createCocktail()
     {
-        $customer = new CustomerModel();
+        $cocktail = new CocktailModel();
 
         // Get updated properties from the body
-        $customer->customer_name = $this->body["customer_name"];
-        $customer->birth_year = $this->body["birth_year"];
+        $cocktail->title = $this->body["title"];
+        $cocktail->description = $this->body["description"];
+        $cocktail->ingredients = $this->body["ingredients"];
+        $cocktail->instructions = $this->body["instructions"];
 
         // Save the customer
-        $success = CustomersService::saveCustomer($customer);
+        $success = CocktailsService::saveCocktail ($cocktail);
 
         // Redirect or show error based on response from business logic layer
         if ($success) {
-            $this->redirect($this->home . "/customers");
+            $this->redirect($this->home . "/cocktails");
         } else {
             $this->error();
         }
@@ -175,23 +177,25 @@ class CocktailsController extends ControllerBase
 
 
     // Update a user with data from the URL and body
-    private function updateCustomer()
+    private function updateCocktail()
     {
-        $customer = new CustomerModel();
+        $cocktail = new CocktailModel();
 
         // Get ID from the URL
         $id = $this->path_parts[2];
 
         // Get updated properties from the body
-        $customer->customer_name = $this->body["customer_name"];
-        $customer->birth_year = $this->body["birth_year"];
+        $cocktail->title = $this->body["title"];
+        $cocktail->description = $this->body["description"];
+        $cocktail->ingredients = $this->body["ingredients"];
+        $cocktail->instructions = $this->body["instructions"];
 
         // Update the customer
-        $success = CustomersService::updateCustomerById($id, $customer);
+        $success = CocktailsService::updateCocktailById($id, $cocktail);
 
         // Redirect or show error based on response from business logic layer
         if ($success) {
-            $this->redirect($this->home . "/customers");
+            $this->redirect($this->home . "/cocktails");
         } else {
             $this->error();
         }
@@ -199,18 +203,18 @@ class CocktailsController extends ControllerBase
 
 
     // Delete a user with data from the URL
-    private function deleteCustomer()
+    private function deleteCocktail()
     {
 
         // Get ID from the URL
         $id = $this->path_parts[2];
 
         // Delete the customer
-        $success = CustomersService::deleteCustomerById($id);
+        $success = CocktailsService::deleteCocktailById($id);
 
         // Redirect or show error based on response from business logic layer
         if ($success) {
-            $this->redirect($this->home . "/customers");
+            $this->redirect($this->home . "/cocktails");
         } else {
             $this->error();
         }
