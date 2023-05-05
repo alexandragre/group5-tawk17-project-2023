@@ -32,11 +32,8 @@ class Template
             </nav>
             <main>
 
-            <div class="landing-page">
-                <article class="heading">
-                    <h1 class="big-h">DRINKS & <br> COCKTAILS</h1>
-                </article>               
-            </div>
+       
+            
        
     <?php }
 
@@ -54,3 +51,4 @@ class Template
         </html>
 <?php }
 }
+

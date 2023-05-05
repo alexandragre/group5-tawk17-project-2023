@@ -79,11 +79,7 @@ li a {
 .heading{
     padding-right: 470px;
 }
-.big-h{
-    font-family: 'Public Sans', sans-serif;
-    color: #D4D0C5;
-    font-size: 6em;
-}
+
 .intro-text{
     color: #D4D0C5;
     font-size: 18px;
@@ -297,85 +293,11 @@ th:nth-child(3) {
 
 
 /* CREATE PAGE */
-.drink-text {
-    width: 143px;
-    color: rgba(210,207,198,1);
-    position: absolute;
-    top: 463px;
-    left: 40px;
-    font-family: Public Sans;
-    font-weight: Medium;
-    font-size: 16px;
-    text-align: left; 
-}
-#drink-input{
-    width: 506px;
-    height: 50px;
-    position: absolute;
-    background: #070606;
-    top: 490px;
-    left: 39px;
-    border: 1px solid rgba(210,207,198,1);
-    border-radius: 25px;
-}
-.description-text {
-    width: 143px;
-    color: rgba(210,207,198,1);
-    position: absolute;
-    top: 570px;
-    left: 40px;
-    font-family: Public Sans;
-    font-weight: Medium;
-    font-size: 16px;
-    text-align: left;  
-}
-#description{
-    width: 506px;
-    height: 50px;
-    position: absolute;
-    background: #070606;
-    top: 598px;
-    left: 40px;
-    border: 1px solid rgba(210,207,198,1);
-    border-radius: 25px;
-}
-.ingridients-text {
-    width: 143px;
-    color: rgba(210,207,198,1);
-    position: absolute;
-    top: 677px;
-    left: 40px;
-    font-family: Public Sans;
-    font-weight: Medium;
-    font-size: 16px;
-    text-align: left;   
-}
-#ingridients{
-    width: 506px;
-    height: 194px;
-    position: absolute;
-    background: #070606;
-    top: 704px;
-    left: 40px;
-    border: 1px solid rgba(210,207,198,1);
-    border-radius: 25px;
-}
-.input-create {
-    width: 506px;
-    height: 58px;
-    background: rgba(217,217,217,1);
-    position: absolute;
-    top: 943px;
-    left: 40px;
-    border: 1px solid rgba(210,207,198,1);
-    border-radius: 25px;
-    font-family: Public Sans;
-    font-weight: Medium;
-    font-size: 16px;
-}
+
+
 .share-img-container {
-    width: 575px;
-    height: 748px;
+    width: 400px;
+    height: 500px;
     background: rgba(210,207,198,1);
     opacity: 1;
     position: absolute;
@@ -395,6 +317,86 @@ th:nth-child(3) {
     border: 2px solid rgba(0,0,0,1);
     border-radius: 100px;
 }
+
+
+form{
+    padding: 0px 50px 0px 50px;
+}
+
+input{
+    background-color: #070606;
+    border-color: rgba(210,207,198,1);
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.title{
+    padding: 15px 275px 15px 20px;
+    background-color: #070606;
+    border-color: rgba(210,207,198,1);
+    border-radius: 15px;
+    border-style: solid;
+    font-size: 16px;
+    color: rgba(210,207,198,1);
+}
+
+.description{
+    padding: 20px 275px 100px 20px;
+    background-color: #070606;
+    border-color: rgba(210,207,198,1);
+    border-radius: 20px;
+    border-style: solid;
+    font-size: 16px;
+    color: rgba(210,207,198,1);
+}
+
+.ingredients{
+    padding: 20px 275px 100px 20px;
+    background-color: #070606;
+    border-color: rgba(210,207,198,1);
+    border-radius: 20px;
+    border-style: solid;
+    font-size: 16px;
+    color: rgba(210,207,198,1);
+}
+
+.instructions{
+    padding: 20px 275px 200px 20px;
+    background-color: #070606;
+    border-color: rgba(210,207,198,1);
+    border-radius: 20px;
+    border-style: solid;
+    font-size: 16px;
+    color: rgba(210,207,198,1);
+}
+
+/*.image{
+    padding: 5px;
+    background-color: #070606;
+    border-color: rgba(210,207,198,1);
+    border-radius: 10px;
+    margin-top: 20px;
+    border-style: solid;
+    font-size: 15px;
+    color: rgba(210,207,198,1);
+}*/
+
+input.btn{
+    color: rgba(210,207,198,1);
+    padding: 10px 60px 10px 60px;
+}
+
+.big-h{
+    font-family: 'Public Sans', sans-serif;
+    color: #D4D0C5;
+    font-size: 65px;
+    padding: 70px 50px 50px 50px;
+}
+
+
+
 
 /* LANDING PAGE */ 
 
