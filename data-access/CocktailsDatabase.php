@@ -43,11 +43,11 @@ class CocktailsDatabase extends Database
     // Create one by creating a query and using the inherited $this->conn 
     public function insert(CocktailModel $cocktail)
     {
-        $query = "INSERT INTO cocktails (cocktail_id, title, description, ingredients, instructions, image) VALUES (?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO cocktails (title, description, ingredients, instructions, image_url) VALUES (?, ?, ?, ?, ?)";
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bind_param("isssss", $cocktail->cocktail_id, $cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url);
+        $stmt->bind_param("sssss", $cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url);
 
         $success = $stmt->execute();
 
@@ -57,11 +57,11 @@ class CocktailsDatabase extends Database
     // Update one by creating a query and using the inherited $this->conn 
     public function updateById($cocktail_id, CocktailModel $cocktail)
     {
-        $query = "UPDATE cocktails SET title=?, description=?, ingredients=?, instructions=?, image=?, WHERE cocktail_id=?;";
+        $query = "UPDATE cocktails SET title=?, description=?, ingredients=?, instructions=?, image_url=? WHERE cocktail_id=?;";
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bind_param("isssss", $cocktail->$cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url, $cocktail_id);
+        $stmt->bind_param("sssssi", $cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url, $cocktail_id);
 
         $success = $stmt->execute();
 

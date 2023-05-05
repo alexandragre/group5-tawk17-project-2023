@@ -92,7 +92,7 @@ class CocktailAPI extends RestAPI
         $cocktail->description = $this->body["description"];
         $cocktail->ingredients = $this->body["ingredients"];
         $cocktail->instructions = $this->body["instructions"];
-        $cocktail->image_url = $this->body["image"];
+        $cocktail->image_url = $this->body["image_url"];
 
         $success = CocktailsService::saveCocktail($cocktail);
 
@@ -115,7 +115,7 @@ class CocktailAPI extends RestAPI
         $cocktail->description = $this->body["description"];
         $cocktail->ingredients = $this->body["ingredients"];
         $cocktail->instructions = $this->body["instructions"];
-        $cocktail->image_url = $this->body["image"];
+        $cocktail->image_url = $this->body["image_url"];
 
         $success = CocktailsService::updateCocktailById($id, $cocktail);
 
