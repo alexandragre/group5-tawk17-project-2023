@@ -13,6 +13,7 @@ require_once __DIR__ . "/functions.php";
 require_once __DIR__ . "/controllers/HomeController.php";
 require_once __DIR__ . "/controllers/AssetsController.php";
 require_once __DIR__ . "/controllers/ArticleController.php";
+require_once __DIR__ . "/controllers/CocktailsController.php";
 
 // Class for routing all our API requests
 
@@ -31,7 +32,7 @@ class FrontendRouter
             // Whenever someone calls "home/Customers" we 
             // will load the CustomerPages class
             "home" => "HomeController",
-            "customers" => "CustomersController",
+            "cocktails" => "CocktailsController",
             "assets" => "AssetsController",
             "articles" => "ArticleController"
         ];

@@ -1,24 +1,34 @@
 <?php
 require_once __DIR__ . "/../Template.php";
 
-Template::header($this->model->customer_name);
+Template::header($this->model->title);
 ?>
 
-<h1><?= $this->model->customer_name ?></h1>
+<h1><?= $this->model->title ?></h1>
 
 <p>
     <b>Id: </b>
-    <?= $this->model->customer_id ?> 
+    <?= $this->model->cocktail_id ?> 
 </p>
 
 <p>
-    <b>Name: </b>
-    <?= $this->model->customer_name ?> 
+    <b>Title: </b>
+    <?= $this->model->title ?> 
 </p>
 
 <p>
-    <b>Birth year: </b>
-    <?= $this->model->birth_year ?> 
+    <b>Description: </b>
+    <?= $this->model->description ?> 
+</p>
+
+<p>
+    <b>Ingredients: </b>
+    <?= $this->model->ingredients ?> 
+</p>
+
+<p>
+    <b>Instructions: </b>
+    <?= $this->model->instructions ?> 
 </p>
 
 

@@ -61,7 +61,7 @@ class CocktailsDatabase extends Database
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bind_param("sii", $cocktail->$cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url, $cocktail_id);
+        $stmt->bind_param("isssss", $cocktail->$cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url, $cocktail_id);
 
         $success = $stmt->execute();
 

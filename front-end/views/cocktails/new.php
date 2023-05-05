@@ -10,7 +10,7 @@ Template::header("New Cocktail");
 <section class="share-container">
     <h1>SHARE & TEST</h1>
 
-    <form method="POST" action="create-cocktail.php" name="AddForm" onsubmit="return validateForm()">
+    <form action="<?= $this->home ?>/cocktail" method="POST" name="AddForm" onsubmit="return validateForm()">
         <label for="title" class="drink-text">Drink name</label>
         <input type="title" id="drink-input" name="drink-input">
         <br><br>

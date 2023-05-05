@@ -23,7 +23,7 @@ class APIRouter
         $this->routes = [
             // Whenever someone calls "api/Customers" we 
             // will load the CustomersAPI class
-            "cocktail" => "CocktailAPI",
+            "cocktails" => "CocktailAPI",
             "root" => "APIRoot"
         ];
 

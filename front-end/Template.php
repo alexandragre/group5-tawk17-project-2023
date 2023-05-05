@@ -31,15 +31,10 @@ class Template
             </nav>
             <main>
 
-            <div class="landing-page">
-                <article class="heading">
-                    <h1 class="big-h">DRINKS & <br> COCKTAILS</h1>
-                </article>
-
-                <article class="search-container">
-                <button class="add-btn"><a href="new-cocktail.php"<?php $new_path = getNewPath();?>>Add</a></button>   
-             <p class="intro-text">With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game. </p>
-    </article>
+                <a href="<?= $home_path ?>">Start</a>
+                <a href="<?= $home_path ?>/cocktails">Cocktails</a>
+                <a href="<?= $home_path ?>/articles">Articles</a>
+               
 </div>
 
     

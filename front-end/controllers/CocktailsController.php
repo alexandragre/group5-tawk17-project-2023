@@ -6,11 +6,11 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
 }
 
 require_once __DIR__ . "/../ControllerBase.php";
-require_once __DIR__ . "/../../business-logic/CustomersService.php";
+require_once __DIR__ . "/../../business-logic/CocktailsService.php";
 
 // Class for handling requests to "home/Customer"
 
-class CustomersController extends ControllerBase
+class CocktailsController extends ControllerBase
 {
 
     public function handleRequest()
@@ -32,7 +32,7 @@ class CustomersController extends ControllerBase
         // Path count is 3 meaning the current URL must be "/home/customers/{SOMETHING}"
         // if {SOMETHING} id "new" we want to show the form for creating a customer
         else if ($this->path_count == 3 && $this->path_parts[2] == "new") {
-            $this->showNewCustomerForm();
+            $this->showNewCocktailForm();
         }
 
         // Path count is 3 meaning the current URL must be "/home/customers/{SOMETHING}"
@@ -61,9 +61,9 @@ class CustomersController extends ControllerBase
     private function showAll()
     {
         // $this->model is used for sending data to the view
-        $this->model = CustomersService::getAllCustomers();
+        $this->model = CocktailsService::getAllCocktails();
 
-        $this->viewPage("customers/index");
+        $this->viewPage("cocktails/index");
     }
 
 
@@ -72,13 +72,13 @@ class CustomersController extends ControllerBase
     private function showOne()
     {
         // Get the customer with the ID from the URL
-        $customer = $this->getCustomer();
+        $cocktail = $this->getCocktail();
 
         // $this->model is used for sending data to the view
-        $this->model = $customer;
+        $this->model = $cocktail;
 
         // Shows the view file customers/single.php
-        $this->viewPage("customers/single");
+        $this->viewPage("cocktails/single");
     }
 
 
@@ -87,39 +87,39 @@ class CustomersController extends ControllerBase
     private function showEditForm()
     {
         // Get the customer with the ID from the URL
-        $customer = $this->getCustomer();
+        $cocktail = $this->getCocktail();
 
         // $this->model is used for sending data to the view
-        $this->model = $customer;
+        $this->model = $cocktail;
 
         // Shows the view file customers/edit.php
-        $this->viewPage("customers/edit");
+        $this->viewPage("cocktails/edit");
     }
 
 
 
     // Gets one customer and shows the in the edit customer-view
-    private function showNewCustomerForm()
+    private function showNewCocktailForm()
     {
         // Shows the view file customers/new.php
-        $this->viewPage("customers/new");
+        $this->viewPage("cocktails/new");
     }
 
 
 
     // Gets one customer based on the id in the url
-    private function getCustomer()
+    private function getCocktail()
     {
         // Get the customer with the specified ID
         $id = $this->path_parts[2];
-        $customer = CustomersService::getCustomerById($id);
+        $cocktail = CustomersService::getCocktailById($id);
 
         // Show not found if customer doesn't exist
-        if ($customer == null) {
+        if ($cocktail == null) {
             $this->notFound();
         }
 
-        return $customer;
+        return $cocktail;
     }
 
 
