@@ -18,8 +18,8 @@ Template::header("New Cocktail");
 
       <div class="form-right">
         <input class="instructions" type="text" name="instructions" placeholder="Instructions"> <br>
-        <input class="image" type="file" id="img" name="image_url" placeholder="Add image" accept="image/*"> <br>
-        <input type="Save" value="Save" class="btn">    
+        <input class="image" type="file" id="img" name="image_url" accept="image/*"> <br>
+        <input type="submit" value="Save" class="btn">    
         </form>
       </div>
 
