@@ -27,10 +27,13 @@ class Template
                 <li class="icon-"><a href="index.html" class="sipper-logo">Sipper</a></li>
                 <li class="icon-con1"><a href="<?= $home_path ?>">Start</a>
                 <li class="icon-con2"><a href="<?= $home_path ?>/cocktails">Cocktails</a></li>
-                <li class="icon-con3"><a href="<?= $home_path ?>/articles">Articles</a></li>
                 </ul>
             </nav>
             <main>
+            
+            <div class="img-bg">
+        <div class="image-box"></div>
+        </div>
 
        
             
