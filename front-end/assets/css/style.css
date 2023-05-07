@@ -265,6 +265,9 @@ article.item > div {
 
 
 /* EDIT PAGE */
+.edit-form{
+    display: flex;
+}
 .create-btn{
     color: #D4D0C5;
     border: solid 1px #D4D0C5;
@@ -405,13 +408,24 @@ input{
     border-style: solid;
     font-size: 16px;
     text-align: center;
-    color: rgba(210,207,198,1);
-    
+    color: rgba(210,207,198,1);  
 }
-input.btn{
-    padding: 19px 212px 19px 212px;
+.save-btn{
+    padding: 19px 112px 19px 112px;
     background-color: rgba(210,207,198,1);
     border-color: rgba(210,207,198,1);
+    border-radius: 50px;
+    border-style: solid;
+    font-size: 16px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #070606;
+    font-weight: 600;
+}
+.delete-btn{
+    padding: 19px 112px 19px 112px;
+    background-color: #C16D29;
+    border-color: #C16D29;
     border-radius: 50px;
     border-style: solid;
     font-size: 16px;
