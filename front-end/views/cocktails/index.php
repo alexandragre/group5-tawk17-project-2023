@@ -21,11 +21,13 @@ Template::header("Cocktails");
                 <span>Description: <?= $cocktail->description ?></span> <br>
                 <span>Ingredients: <?= $cocktail->ingredients ?></span> <br>
                 <span>Instructions: <?= $cocktail->instructions ?></span> <br>
-                <span>Add image: <?= $cocktail->image_url ?></span> <br>
+            
             </div>
 
+            <div class="show-edit">
             <a href="<?= $this->home ?>/cocktails/<?= $cocktail->cocktail_id ?>">Show</a>
             <a href="<?= $this->home ?>/cocktails/<?= $cocktail->cocktail_id ?>/edit">Edit</a>
+            </div>
         </article>
 
     <?php endforeach; ?>
