@@ -10,4 +10,16 @@ function validateForm() {
       alert("Description must be filled out");
       return false;
     }
+    if (ingredients == "") {
+      alert("Ingredients must be filled out");
+      return false;
+    }
+    if (instructions == "") {
+      alert("Instructions must be filled out");
+      return false;
+    }
+    if (image_url == "") {
+      alert("Image must be chosen");
+      return false;
+    }
   }
