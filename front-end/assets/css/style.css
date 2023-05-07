@@ -309,10 +309,8 @@ th:nth-child(3) {
 }
 
 .form-right{
-    padding: 275px 200px 0px 50px;
+    padding: 260px 200px 0px 50px;
 }
-
-
 input{
     background-color: #070606;
     border-color: rgba(210,207,198,1);
@@ -330,7 +328,6 @@ input{
     font-size: 16px;
     color: rgba(210,207,198,1);
 }
-
 .description{
     padding: 20px 275px 100px 20px;
     background-color: #070606;
@@ -340,7 +337,6 @@ input{
     font-size: 16px;
     color: rgba(210,207,198,1);
 }
-
 .ingredients{
     padding: 20px 275px 100px 20px;
     background-color: #070606;
@@ -350,7 +346,6 @@ input{
     font-size: 16px;
     color: rgba(210,207,198,1);
 }
-
 .instructions{
     padding: 20px 275px 175px 20px;
     background-color: #070606;
@@ -361,7 +356,6 @@ input{
     color: rgba(210,207,198,1);
     margin-top: 0px;
 }
-
 .image{
     padding: 15px 70px 15px 90px;
     background-color: #070606;
@@ -373,8 +367,6 @@ input{
     color: rgba(210,207,198,1);
     
 }
-
-
 input.btn{
     padding: 19px 212px 19px 212px;
     background-color: rgba(210,207,198,1);
@@ -392,11 +384,8 @@ input.btn{
     font-family: 'Public Sans', sans-serif;
     color: #D4D0C5;
     font-size: 65px;
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 35px 0px;
 }
-
-
-
 
 
 /* LANDING PAGE */ 
