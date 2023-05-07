@@ -11,6 +11,18 @@ a{
     text-decoration: none;
 }
 
+p {
+    color: #D4D0C5;
+}
+
+h1 {
+    color: #D4D0C5;
+}
+
+span {
+    color: black;
+}
+
 /* NAV */
 .navigation{
     padding: 10px 0px 10px 0px;
@@ -126,19 +138,42 @@ a{
     margin-right: 16px;
     font-size: 17px;
   }*/
-.grid-container {
+
+.item-grid {
     margin: 30px 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px 30px;
+    grid-gap: 50px;
     align-items: center;
     justify-content: center;
     place-items: center;
 }
-.grid-container > article img {
-    width: 100%;
-    margin: auto;
+article.item {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #D4D0C5;
+    border-radius: 25px;
+    
 }
+
+article.item a {
+    color: black;
+}
+
+article.item b {
+    padding-top: 5px;
+}
+
+article.item > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
 .drink-img{
     margin-bottom: 20px;
     height: 420px;
@@ -400,8 +435,6 @@ input.btn{
     opacity: 1;
     text-align: left;
 }
-
-
 
 .img-grid {
     flex: 50%;

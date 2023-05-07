@@ -9,7 +9,7 @@ Template::header("New Cocktail");
 <div class="create-new">                    
             
       <div class="form-left">
-        <h1 class="big-h">CREATE A <br> NEW RECIPIE..</h1>
+        <h1 class="big-h">CREATE A <br> NEW RECIPE..</h1>
         <form action="<?= $this->home ?>/cocktails" method="POST" name="AddForm" onsubmit="return validateForm()">
         <input class="title" type="text" name="title" placeholder="Title"> <br>
         <input class="description" type="text" name="description" placeholder="Description"> <br>
