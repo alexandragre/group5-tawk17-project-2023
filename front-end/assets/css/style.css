@@ -86,14 +86,14 @@ li a {
 .heading{
     padding-right: 470px;
 }
-
 .intro-text{
     color: #D4D0C5;
     font-size: 18px;
     margin-top: 30px;
 }
-.search-container{
-    width: 350px;
+.add-container{
+    width: 60%;
+    margin: 0 auto;
 }
 .add-btn {
     background-color: #070606;
@@ -102,16 +102,11 @@ li a {
     border-radius: 25px;
     padding: 20px 45px;
     margin-top: 30px;
+    text-align: center;
 }
-
-
 .add-btn a:hover {
     color: #C16D29;
-
 }
-
-
-
 a{
     color: #D4D0C5;
     padding: 18px 30px;
@@ -128,27 +123,27 @@ a{
     background-size: cover;
     background-position: 0 55%;
 }
-
-/*
-.search-bar {
-    overflow: hidden;
-    background-color: rgba(210,207,198,1);
-    width: 378px;
-    height: 58px;
-    position: absolute;
-    top: 219px;
-    left: 860px;
-    border-radius: 25px;
-  }
-.search-bar input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-  }*/
-
+.intro-p{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.show-btn{
+    font-size: 1em;
+    padding: 10px;
+    color: #D4D0C5;
+    background-color: #070606;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 20px;
+    text-align: center;
+}
+.edit-btn{
+    font-size: 1em;
+    padding: 10px;
+    color: #070606;
+    font-family: 'Public Sans', sans-serif;
+    text-align: center;
+}
 .item-grid {
     margin: 30px 40px;
     display: grid;
@@ -158,13 +153,14 @@ a{
     justify-content: center;
     place-items: center;
 }
-
-
 .item-grid div {
     overflow: hidden;
 }
+.drink-card{
+    margin-bottom: 10px;
+}
 article.item {
-    padding: 50px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     background: #D4D0C5;
@@ -174,19 +170,9 @@ article.item {
     justify-content: space-between;
     
 }
-
-
-article.item a {
-    color: #C16D29;
-    font-size: 24px;
-    padding: 10px 0px;
-    font-style: bold;
-}
-
 article.item b {
     padding-top: 5px;
 }
-
 article.item > div {
     display: flex;
     flex-direction: column;
