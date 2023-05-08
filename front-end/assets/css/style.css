@@ -410,6 +410,15 @@ input{
     text-align: center;
     color: rgba(210,207,198,1);  
 }
+.card-title{
+    font-size: 2em;
+    font-family: 'Public Sans', sans-serif;
+    border-bottom: 1px solid #070606;
+}
+.card-description{
+    font-size: 1em;
+    font-family: 'Public Sans', sans-serif;
+}
 .btn{
     padding: 19px 212px 19px 212px;
     background-color: rgba(210,207,198,1);

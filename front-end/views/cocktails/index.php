@@ -18,10 +18,8 @@ Template::header("Cocktails");
         <article class="item">
             <div class="drink-card">
                 
-                <span>Title: <?= $cocktail->title ?></span> <br>
-                <span>Description: <?= $cocktail->description ?></span> <br>
-                <span>Ingredients: <?= $cocktail->ingredients ?></span> <br>
-                <span>Instructions: <?= $cocktail->instructions ?></span> <br>
+                <span class="card-title"><?= $cocktail->title ?></span> <br>
+                <span class="card-description"><?= $cocktail->description ?></span> <br>
             
             </div>
 
