@@ -5,6 +5,8 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
     die('This file cannot be accessed directly.');
 }
 
+require_once __DIR__ . "/../business-logic/AuthService.php";
+require_once __DIR__ . "/../business-logic/CocktailsService.php";
 // Base class for all API classes to inherit from.
 // Includes functions for sending response as JSON
 // as well as parsing the request.
@@ -66,11 +68,60 @@ class RestAPI
     protected function created(){
         $this->sendJson("Created", 201);
     }
+    // Preset response for general invalid request
+    protected function invalidRequest(){
+        $this->sendJson("Invalid request", 400);
+    }
+
+    // Preset response for unauthorized
+    protected function unauthorized(){
+        $this->sendJson("Unauthorized", 401);
+    }
+
+    // Preset response for unauthorized
+    protected function forbidden(){
+        $this->sendJson("Forbidden", 403);
+    }
 
     // Preset response for general server error
     protected function error(){
         $this->sendJson("Error", 500);
     }
+
+    protected function setUser(){
+        if(!isset($this->headers["Authorization"])){
+            return false;
+        }
+
+        $auth_header = $this->headers["Authorization"];
+        $auth_parts = explode(" ", $auth_header);
+
+        if(!isset($auth_parts[1])){
+            return false;
+        }
+
+        $token = $auth_parts[1];
+
+        $payload = AuthService::validateToken($token);
+
+        if($payload === false || $payload->iss !== APPLICATION_NAME){
+            return false;
+        }
+
+        $this->user = UsersService::getUserById($payload->user_id);
+    }
+
+    protected function requireAuth($authorized_roles = []){
+    
+        if($this->user === false){
+            $this->unauthorized();
+        }
+
+        if(count($authorized_roles) > 0 && in_array($this->user->user_role, $authorized_roles) === false){
+            $this->forbidden();
+        }
+    }
+
 
 
     // Parses the body as JSON so classes inheriting from this 

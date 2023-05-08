@@ -21,23 +21,11 @@
         return $home_path;
     }
 
-    function getNewPath()
-    {
-        // Get the requested URI from the server
-        $string = $_SERVER["REQUEST_URI"];
-
-        // Get the name of the home path from the URL parameter 'path'
-        $new_path_name = explode("/new-cocktail.php", $_GET["path"]);
-
-        // Split the requested URI into an array of parts
-        $parts = explode('/', $string);
-
-        // Find the index of the home path within the array of parts
-        $new_index = array_search($new_path_name, $parts);
-
-        // Concatenate the parts up to and including the home path to form the full home path
-       $new_path = implode('/', array_slice($parts, 0, $new_index + 1));
-
-        // Return the full home path
-        return $new_path;
+    function getUser()
+{
+    if (!isset($_SESSION["user"])) {
+        return false;
     }
+
+    return UsersService::getUserById($_SESSION["user"]->user_id);
+}

@@ -5,7 +5,7 @@ class Template
     public static function header($title)
     {
         $home_path = getHomePath();
-        $new_path = getNewPath();
+        $user = getUser();
         ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -35,8 +35,21 @@ class Template
         <div class="image-box"></div>
         </div>
 
-       
-            
+        <?php if ($user) : ?>
+                    <a href="<?= $home_path ?>/auth/profile">Profile</a>
+                    <a href="<?= $home_path ?>/purchases">Purchases</a>
+                <?php else : ?>
+                    <a href="<?= $home_path ?>/auth/login">Log in</a>
+                <?php endif; ?>
+            </nav>
+
+            <main>
+
+                <?php if ($error) : ?>
+                    <div class="error">
+                        <p><?= $error ?></p>
+                    </div>
+                <?php endif; ?> 
        
     <?php }
 
@@ -47,7 +60,7 @@ class Template
         ?>
         </main>
             <footer>
-                Copyright 2025
+                Copyright 2023
             </footer>
         </body>
 
