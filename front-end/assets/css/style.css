@@ -74,7 +74,6 @@ li a {
     width: 95%;
     margin: 0 auto;
     padding: 30px 0px 0px 0px;
-    display: flex;
 }
 .search-container input[type=text] {
     border: 1px solid #D4D0C5;  
@@ -316,6 +315,26 @@ article.item > div {
 .recipes-overview{
     display: flex;
 }
+.c-title{
+    font-size: 3em;
+    font-family: 'Public Sans', sans-serif;
+}
+.cocktail-txt{
+    font-size: 1.5em;
+
+}
+.overview{
+    display: flex;
+}
+.cocktail-overview{
+    border: 2px solid #D4D0C5;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+
+
+
 table {
     width: 100%;
     margin: 30px auto;
