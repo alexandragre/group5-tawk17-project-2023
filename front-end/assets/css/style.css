@@ -315,14 +315,7 @@ article.item > div {
 .recipes-overview{
     display: flex;
 }
-.c-title{
-    font-size: 3em;
-    font-family: 'Public Sans', sans-serif;
-}
-.cocktail-txt{
-    font-size: 1.5em;
 
-}
 .overview{
     display: flex;
 }
@@ -331,6 +324,17 @@ article.item > div {
     padding: 20px;
     border-radius: 25px;
 }
+.c-title{
+    font-size: 3em;
+    font-family: 'Public Sans', sans-serif;
+    border-bottom: 2px solid #D4D0C5;
+}
+.cocktail-txt{
+    font-size: 1.5em;
+    margin-top: 10px;
+
+}
+
 
 
 
