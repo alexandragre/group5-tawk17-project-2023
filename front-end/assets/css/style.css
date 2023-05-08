@@ -353,7 +353,7 @@ th:nth-child(3) {
 }
 
 .form-right{
-    padding: 260px 200px 0px 50px;
+    padding: 185px 200px 0px 50px;
 }
 input{
     background-color: #070606;
@@ -423,19 +423,18 @@ input{
     font-weight: 600;
 }
 .save-btn{
-    padding: 19px 112px 19px 112px;
+    padding: 19px 90px 19px 90px;
     background-color: rgba(210,207,198,1);
     border-color: rgba(210,207,198,1);
     border-radius: 50px;
     border-style: solid;
     font-size: 16px;
-    margin-bottom: 100px;
     text-align: center;
     color: #070606;
     font-weight: 600;
 }
 .delete-btn{
-    padding: 19px 112px 19px 112px;
+    padding: 19px 90px 19px 90px;
     background-color: #C16D29;
     border-color: #C16D29;
     border-radius: 50px;
