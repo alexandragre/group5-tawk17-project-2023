@@ -110,12 +110,12 @@ class CocktailAPI extends RestAPI
 
         // Admins can connect any user to the purchase
         if($this->user->user_role === "admin"){
-            $purchase->user_id = $this->body["user_id"];
+            $cocktail->user_id = $this->body["user_id"];
         }
 
         // Regular users can only add purchases to themself
         else{
-            $purchase->user_id = $this->user->user_id;
+            $cocktail->user_id = $this->user->user_id;
         }
 
         $success = CocktailsService::saveCocktail($cocktail);
