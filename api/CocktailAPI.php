@@ -63,28 +63,42 @@ class CocktailAPI extends RestAPI
     // Gets all customers and sends them to the client as JSON
     private function getAll()
     {
-        $cocktail = CocktailsService::getAllCocktails();
+        $this->requireAuth();
 
-        $this->sendJson($cocktail);
+        if ($this->user->user_setting === "admin") {
+            $cocktails = CocktailsService::getAllCocktails();
+        } else {
+            $cocktails = PurchasesService::getCocktailsByUser($this->user->user_id);
+        }
+
+        $this->sendJson($cocktails);
     }
+        
 
     // Gets one and sends it to the client as JSON
     private function getById($id)
     {
-        $cocktail = CocktailsService::getCocktailById($id);
+        $this->requireAuth();
 
-        if ($cocktail) {
-            $this->sendJson($cocktail);
-        }
-        else {
+        $cocktail = PurchasesService::getCocktailById($id);
+
+        if (!$cocktail) {
             $this->notFound();
         }
+
+        if ($this->user->user_setting !== "admin" || $cocktail->user_id !== $this->user->user_id) {
+            $this->forbidden();
+        }
+
+        $this->sendJson($cocktail);
     }
 
     // Gets the contents of the body and saves it as a customer by 
     // inserting it in the database.
     private function postOne()
     {
+        $this->requireAuth();
+
         $cocktail = new CocktailModel();
 
         $cocktail->cocktail_id = $this->body["cocktail_id"];
@@ -94,20 +108,32 @@ class CocktailAPI extends RestAPI
         $cocktail->instructions = $this->body["instructions"];
         $cocktail->image_url = $this->body["image_url"];
 
+        // Admins can connect any user to the purchase
+        if($this->user->user_role === "admin"){
+            $purchase->user_id = $this->body["user_id"];
+        }
+
+        // Regular users can only add purchases to themself
+        else{
+            $purchase->user_id = $this->user->user_id;
+        }
+
         $success = CocktailsService::saveCocktail($cocktail);
 
-        if($success){
+        if ($success) {
             $this->created();
-        }
-        else{
+        } else {
             $this->error();
         }
+
     }
 
     // Gets the contents of the body and updates the customer
     // by sending it to the DB
     private function putOne($id)
     {
+        $this->requireAuth();
+
         $cocktail = new CocktailModel();
         
         $cocktail->cocktail_id = $this->body["cocktail_id"];
@@ -117,12 +143,20 @@ class CocktailAPI extends RestAPI
         $cocktail->instructions = $this->body["instructions"];
         $cocktail->image_url = $this->body["image_url"];
 
+        if($this->user->user_role === "admin"){
+            $cocktail->user_id = $this->body["user_id"];
+        }
+
+        // Regular users can only add purchases to themself
+        else{
+            $cocktail->user_id = $this->user->user_id;
+        }
+
         $success = CocktailsService::updateCocktailById($id, $cocktail);
 
-        if($success){
+        if ($success) {
             $this->ok();
-        }
-        else{
+        } else {
             $this->error();
         }
     }
@@ -130,6 +164,8 @@ class CocktailAPI extends RestAPI
     // Deletes the customer with the specified ID in the DB
     private function deleteOne($id)
     {
+        $this->requireAuth(["admin"]);
+
         $cocktail = CocktailsService::getCocktailById($id);
 
         if($cocktail == null){

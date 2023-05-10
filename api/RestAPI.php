@@ -14,7 +14,8 @@ require_once __DIR__ . "/../business-logic/CocktailsService.php";
 class RestAPI
 {
 
-    protected $path_parts, $path_count, $query_params, $method, $body;
+    protected $path_parts, $path_count, $query_params, $method, $headers,$body;
+    protected $user = false;
 
     // Gets data from the url and sets the protected properties
     // so that any class inheriting from this can read and handle
@@ -25,6 +26,7 @@ class RestAPI
         // Set the other protected properties
         $this->path_parts = $this->removeEmptyStrings($path_parts);
         $this->query_params = $query_params;
+        $this->headers = getallheaders();
         $this->method = $_SERVER["REQUEST_METHOD"];
 
         // Count the number of "parts" in the path
@@ -33,6 +35,7 @@ class RestAPI
         $this->path_count = count($this->path_parts);
 
         $this->parseBody();
+        $this->setUser();
     }
 
     // Sends the content of $response as JSON and ends execution
@@ -88,6 +91,7 @@ class RestAPI
         $this->sendJson("Error", 500);
     }
 
+    // sets the user property if the call supplies a token and is valid - set user to the user
     protected function setUser(){
         if(!isset($this->headers["Authorization"])){
             return false;
@@ -111,13 +115,14 @@ class RestAPI
         $this->user = UsersService::getUserById($payload->user_id);
     }
 
+    // it checks if we are logged in and send JSON status codes if we are not
     protected function requireAuth($authorized_roles = []){
     
         if($this->user === false){
             $this->unauthorized();
         }
 
-        if(count($authorized_roles) > 0 && in_array($this->user->user_role, $authorized_roles) === false){
+        if(count($authorized_roles) > 0 && in_array($this->user->user_setting, $authorized_roles) === false){
             $this->forbidden();
         }
     }

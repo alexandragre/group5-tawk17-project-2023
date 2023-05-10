@@ -37,7 +37,7 @@ class AuthAPI extends RestAPI
         }
     }
 
-    
+    // checks if you are logged in - or send unauthorized status code
     private function getUser()
     {
         $this->requireAuth();
@@ -45,7 +45,7 @@ class AuthAPI extends RestAPI
         $this->sendJson($this->user);
     }
 
-    
+    // creates a new user
     private function registerUser()
     {
         $user = new UserModel();
@@ -64,7 +64,7 @@ class AuthAPI extends RestAPI
         }
     }
 
-    
+    // takes user info from body - checks if password is correct and autuenticates user
     private function login()
     {
         $username = $this->body["username"];
