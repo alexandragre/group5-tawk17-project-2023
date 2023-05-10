@@ -12,9 +12,10 @@ require_once __DIR__ . "/../data-access/CocktailsDatabase.php";
 class AuthService
 {
 
-
+    // takes user and password property- return a boul 
     public static function registerUser(UserModel $user, $password)
     {
+        // creates instance of the usersdatabase
         $users_database = new UsersDatabase();
 
         $existing_user = $users_database->getByUsername($user->username);
@@ -24,7 +25,7 @@ class AuthService
             // Username exists
             return false;
         }
-
+        // hash converts or calculate a value that is unique for that string
         // Hash the password securely
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -37,7 +38,7 @@ class AuthService
         return $success;
     }
 
-
+    // takes username and password and check if the password is correct 
     public static function authenticateUser($username, $test_password)
     {
         $users_database = new UsersDatabase();
@@ -60,7 +61,7 @@ class AuthService
         return $user;
     }
 
-
+    // update password of a user
     public static function updatePassword($user_id, $password)
     {
         $users_database = new UsersDatabase();
@@ -74,6 +75,7 @@ class AuthService
         return $success;
     }
 
+    // Token that is used to authenticate our users and make sure that they are what they say they are
     public static function generateJsonWebToken(UserModel $user)
     {
         // Set the JWT header and payload with the user ID and username
@@ -112,6 +114,7 @@ class AuthService
         return $token;
     }
 
+    // will return false if not valid or user if valid 
     public static function validateToken($token)
     {
         // Split the token into header, payload, and signature strings

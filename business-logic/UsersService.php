@@ -17,7 +17,7 @@ class UsersService
 
         return $user;
     }
-
+    // get a user by username 
     public static function getUserByUsername($username)
     {
         $users_database = new UsersDatabase();

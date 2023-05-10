@@ -73,6 +73,7 @@ class UsersDatabase extends Database
         $user = $result->fetch_object("UserModel");
 
         // Never send the password hash unless needed for authentication
+        // unsets the password so it does not display on the user info
         unset($user->password_hash);
 
         return $user;
@@ -99,11 +100,11 @@ class UsersDatabase extends Database
     // Create one by creating a query and using the inherited $this->conn 
     public function insert(UserModel $user)
     {
-        $query = "INSERT INTO users (username, password_hash, user_role, profile_pic_url) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO users (username, password_hash, user_setting, profile_pic_url) VALUES (?, ?, ?, ?)";
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bind_param("ssss", $user->username, $user->password_hash, $user->user_role, $user->profile_pic_url);
+        $stmt->bind_param("ssss", $user->username, $user->password_hash, $user->user_setting, $user->profile_pic_url);
 
         $success = $stmt->execute();
 
@@ -113,11 +114,11 @@ class UsersDatabase extends Database
     // Update one by creating a query and using the inherited $this->conn 
     public function updateById($user_id, UserModel $user)
     {
-        $query = "UPDATE users SET username=?, user_role=?, profile_pic_url=? WHERE user_id=?;";
+        $query = "UPDATE users SET username=?, user_setting=?, profile_pic_url=? WHERE user_id=?;";
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bind_param("sssi", $user->username, $user->user_role, $user->profile_pic_url, $user_id);
+        $stmt->bind_param("sssi", $user->username, $user->user_setting, $user->profile_pic_url, $user_id);
 
         $success = $stmt->execute();
 

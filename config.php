@@ -1,4 +1,5 @@
 <?php
+// this file defines all values at the start of the code
 
 // Run `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
 // in terminal to generate secret

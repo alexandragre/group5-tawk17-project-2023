@@ -40,6 +40,28 @@ class CocktailsDatabase extends Database
         return $cocktails;
     }
 
+     // Gets the cocktails from the logged in user 
+    public function getByUserId($user_id)
+    {
+        $query = "SELECT * FROM cocktails WHERE user_id = ?";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bind_param("i", $user_id);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $cocktails = [];
+
+        while ($cocktail = $result->fetch_object("CocktailModel")) {
+            $cocktails[] = $cocktail;
+        }
+
+        return $cocktails;
+    }
+
     // Create one by creating a query and using the inherited $this->conn 
     public function insert(CocktailModel $cocktail)
     {
@@ -53,6 +75,7 @@ class CocktailsDatabase extends Database
 
         return $success;
     }
+
 
     // Update one by creating a query and using the inherited $this->conn 
     public function updateById($cocktail_id, CocktailModel $cocktail)

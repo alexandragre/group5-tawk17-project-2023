@@ -11,6 +11,6 @@ class UserModel{
     public $user_id;
     public $username;
     public $password_hash;
-    public $user_setting; // Don't use 'role': https://www.sqlstyle.guide/
+    public $user_setting; 
     public $profile_pic_url;
 }
