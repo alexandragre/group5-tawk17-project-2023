@@ -143,6 +143,7 @@ class CocktailAPI extends RestAPI
         $cocktail->instructions = $this->body["instructions"];
         $cocktail->image_url = $this->body["image_url"];
 
+        // admin can onnect any user 
         if($this->user->user_role === "admin"){
             $cocktail->user_id = $this->body["user_id"];
         }
