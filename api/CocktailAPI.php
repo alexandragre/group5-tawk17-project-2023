@@ -68,7 +68,7 @@ class CocktailAPI extends RestAPI
         if ($this->user->user_setting === "admin") {
             $cocktails = CocktailsService::getAllCocktails();
         } else {
-            $cocktails = PurchasesService::getCocktailsByUser($this->user->user_id);
+            $cocktails = CocktailsService::getCocktailsByUser($this->user->user_id);
         }
 
         $this->sendJson($cocktails);
@@ -80,7 +80,7 @@ class CocktailAPI extends RestAPI
     {
         $this->requireAuth();
 
-        $cocktail = PurchasesService::getCocktailById($id);
+        $cocktail = CocktailsService::getCocktailById($id);
 
         if (!$cocktail) {
             $this->notFound();
