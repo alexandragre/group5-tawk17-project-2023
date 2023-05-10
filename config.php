@@ -7,7 +7,9 @@ define('JWT_SECRET', 'your_jwt_secret_here');
 
 
 // Set database connection info here
+// global variable - accessable from anywhere
+// saves important and secret code
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
-define('DB_DATABASE', 'multitier_shop');
+define('DB_DATABASE', 'cocktails_db');
