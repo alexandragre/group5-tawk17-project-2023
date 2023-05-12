@@ -4,7 +4,7 @@
 // Run `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
 // in terminal to generate secret
 define('APPLICATION_NAME', 'cocktail_db');
-define('JWT_SECRET', 'your_jwt_secret_here');
+define('JWT_SECRET', '123456789');
 
 
 // Set database connection info here
