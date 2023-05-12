@@ -24,8 +24,8 @@ Template::header("Cocktails");
             </div>
 
             <div class="show-edit">
-            <a href="<?= $this->home ?>/cocktails/<?= $cocktail->cocktail_id ?>" class="show-btn">Show</a>
-            <a href="<?= $this->home ?>/cocktails/<?= $cocktail->cocktail_id ?>/edit" class="edit-btn">Edit</a>
+            <a href="<?= $this->home ?>/cocktails/single<?= $cocktail->cocktail_id ?>" class="show-btn">Show</a>
+            <a href="<?= $this->home ?>/cocktails/edit<?= $cocktail->cocktail_id ?>/edit" class="edit-btn">Edit</a>
             </div>
         </article>
 
