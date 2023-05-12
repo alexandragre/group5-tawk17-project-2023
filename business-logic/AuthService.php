@@ -87,7 +87,7 @@ class AuthService
         $payload = json_encode([
             "user_id" => $user->user_id,
             "username" => $user->username,
-            "user_role" => $user->user_role,
+            "user_setting" => $user->user_setting,
             "iss" => APPLICATION_NAME,
             "aud" => APPLICATION_NAME,
             "exp" => time() + 3600, // set to expire in 1 hour

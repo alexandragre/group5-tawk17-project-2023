@@ -8,7 +8,7 @@ Template::header("Profile");
     Logged in as <b><?= $this->user->username ?></b>
 </p>
 
-<?php if ($this->user->user_role === "admin") : ?>
+<?php if ($this->user->user_setting === "admin") : ?>
     <p>(admin user)</p>
 <?php endif; ?>
 

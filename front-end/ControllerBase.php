@@ -86,7 +86,7 @@ class ControllerBase
             $this->unauthorized();
         }
 
-        if(count($authorized_roles) > 0 && in_array($this->user->user_role, $authorized_roles) === false){
+        if(count($authorized_roles) > 0 && in_array($this->user->user_setting, $authorized_roles) === false){
             $this->forbidden();
         }
     }

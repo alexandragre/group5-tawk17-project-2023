@@ -109,7 +109,7 @@ class CocktailAPI extends RestAPI
         $cocktail->image_url = $this->body["image_url"];
 
         // Admins can connect any user to the purchase
-        if($this->user->user_role === "admin"){
+        if($this->user->user_setting === "admin"){
             $cocktail->user_id = $this->body["user_id"];
         }
 
@@ -144,7 +144,7 @@ class CocktailAPI extends RestAPI
         $cocktail->image_url = $this->body["image_url"];
 
         // admin can onnect any user 
-        if($this->user->user_role === "admin"){
+        if($this->user->user_setting === "admin"){
             $cocktail->user_id = $this->body["user_id"];
         }
 
