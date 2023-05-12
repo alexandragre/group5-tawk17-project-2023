@@ -31,7 +31,7 @@ Template::header("Cocktails");
             </p>
 
             <div class="show-edit">
-            <a href="<?= $this->home ?>/cocktails/<?= $cocktail->cocktail_id ?>" class="show-btn">Show</a>
+            <a href="<?= $this->home ?>/cocktails/<?= $cocktail->cocktail_id ?>/single" class="show-btn">Show</a>
 
             <?php endif; ?>
 
