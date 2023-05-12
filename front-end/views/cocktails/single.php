@@ -35,8 +35,16 @@ Template::header($this->model->cocktail_id);
 <div class="img-overview">
 <p>
 <b><?= $this->model->image_url ?> </b>
-
 </p>
+
+<?php if ($this->user->user_setting === "admin") : ?>
+
+<p>
+    <b>User ID: </b>
+    <?= $this->model->user_id ?>
+</p>
+
+<?php endif; ?>
 </div>
 </div>
 
