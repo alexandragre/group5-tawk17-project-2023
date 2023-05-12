@@ -12,5 +12,4 @@ class UserModel{
     public $username;
     public $password_hash;
     public $user_setting; 
-    public $profile_pic_url;
 }

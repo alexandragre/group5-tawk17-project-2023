@@ -12,7 +12,6 @@ require_once __DIR__ . "/functions.php";
 //require_once __DIR__ . "/controllers/CustomerController.php";
 require_once __DIR__ . "/controllers/AuthController.php";
 require_once __DIR__ . "/controllers/HomeController.php";
-require_once __DIR__ . "/controllers/PurchaseController.php";
 require_once __DIR__ . "/controllers/AssetsController.php";
 require_once __DIR__ . "/controllers/CocktailsController.php";
 
@@ -35,7 +34,6 @@ class FrontendRouter
             "home" => "HomeController",
             "cocktails" => "CocktailsController",
             "auth" => "AuthController",
-            "purchases" => "PurchaseController",
             "assets" => "AssetsController",
         ];
 

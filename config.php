@@ -3,7 +3,7 @@
 
 // Run `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
 // in terminal to generate secret
-define('APPLICATION_NAME', 'cocktails_db');
+define('APPLICATION_NAME', 'cocktail_db');
 define('JWT_SECRET', 'your_jwt_secret_here');
 
 
@@ -13,4 +13,4 @@ define('JWT_SECRET', 'your_jwt_secret_here');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
-define('DB_DATABASE', 'cocktails_db');
+define('DB_DATABASE', 'cocktail_db');
