@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../../Template.php";
 
-Template::header($this->model->title);
+Template::header($this->model->cocktail_id);
 ?>
 
 <div class="landing-page">
