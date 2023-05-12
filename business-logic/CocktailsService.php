@@ -22,7 +22,7 @@ class CocktailsService{
         // or other secret/sensitive data that shouldn't be 
         // exposed to users calling the API
 
-        return $cocktails;
+        return $cocktail;
     }
 
     // Get all customers by creating a database object 

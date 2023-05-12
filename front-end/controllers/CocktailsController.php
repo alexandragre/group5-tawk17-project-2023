@@ -80,6 +80,7 @@ class CocktailsController extends ControllerBase
     // Gets one customer and shows the in the single customer-view
     private function showOne()
     {
+       
         // Get the customer with the ID from the URL
         $cocktail = $this->getCocktail();
 
@@ -125,6 +126,7 @@ class CocktailsController extends ControllerBase
 
         // Get the customer with the specified ID
         $id = $this->path_parts[2];
+
         $cocktail = CocktailsService::getCocktailById($id);
 
         // Show not found if customer doesn't exist
