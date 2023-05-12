@@ -36,13 +36,14 @@ class Template
         </div>
 
         <?php if ($user) : ?>
-                    <a href="<?= $home_path ?>/auth/profile">Profile</a>
-                    <a href="<?= $home_path ?>/cocktails">View cocktails</a>
+            <div class ="cocktails-nav">
+                    <a class="nav" href="<?= $home_path ?>/auth/profile">Profile</a>
+                    <a class="nav" href="<?= $home_path ?>/cocktails">View cocktails</a>
+                    </div>
                 <?php else : ?>
                     <a href="<?= $home_path ?>/auth/login">Log in</a>
                 <?php endif; ?>
             </nav>
-
             <main>
 
                 <?php if ($error) : ?>
@@ -52,6 +53,7 @@ class Template
                 <?php endif; ?> 
        
     <?php }
+    
 
 
 

@@ -335,6 +335,18 @@ article.item > div {
 
 }
 
+.cocktails-nav{
+    text-align: center;
+    align-items: center;
+    background-color: #D4D0C5;
+    padding: 20px;
+}
+.nav{
+    color: #070606;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    border: 1px solid #070606;
+}
 
 
 
