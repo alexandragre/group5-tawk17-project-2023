@@ -60,8 +60,17 @@ class CocktailsController extends ControllerBase
     // Gets all customers and shows them in the index view
     private function showAll()
     {
+       $this->requireAuth(); 
+
+       if ($this->user->user_setting === "admin") {
+           $cocktails = CocktailsService::getAllCocktails();
+       } else {
+           $cocktails = CocktailsService::getCocktailsByUser($this->user->user_id);
+       }
+
+
         // $this->model is used for sending data to the view
-        $this->model = CocktailsService::getAllCocktails();
+        $this->model = $cocktails;
 
         $this->viewPage("cocktails/index");
     }
@@ -86,6 +95,7 @@ class CocktailsController extends ControllerBase
     // Gets one customer and shows the in the edit customer-view
     private function showEditForm()
     {
+        $this->requireAuth(["admin"]); 
         // Get the customer with the ID from the URL
         $cocktail = $this->getCocktail();
 
@@ -101,6 +111,7 @@ class CocktailsController extends ControllerBase
     // Gets one customer and shows the in the edit customer-view
     private function showNewCocktailForm()
     {
+        $this->requireAuth(); 
         // Shows the view file customers/new.php
         $this->viewPage("cocktails/new");
     }
@@ -110,13 +121,18 @@ class CocktailsController extends ControllerBase
     // Gets one customer based on the id in the url
     private function getCocktail()
     {
+        $this->requireAuth(); 
+
         // Get the customer with the specified ID
         $id = $this->path_parts[2];
         $cocktail = CocktailsService::getCocktailById($id);
 
         // Show not found if customer doesn't exist
-        if ($cocktail == null) {
+        if (!$cocktail) {
             $this->notFound();
+        }
+        if ($this->user->user_setting !== "admin" && $cocktail->user_id !== $this->user_id){
+            $this->forbidden();
         }
 
         return $cocktail;
@@ -156,6 +172,8 @@ class CocktailsController extends ControllerBase
     // Create a user with data from the URL and body
     private function createCocktail()
     {
+        $this->requireAuth(); 
+
         $cocktail = new CocktailModel();
 
         // Get updated properties from the body
@@ -163,6 +181,15 @@ class CocktailsController extends ControllerBase
         $cocktail->description = $this->body["description"];
         $cocktail->ingredients = $this->body["ingredients"];
         $cocktail->instructions = $this->body["instructions"];
+        $cocktail->image_url = $this->body["image_url"];
+
+        if ($this->user->user_setting === "admin") {
+            $cocktail->user_id = $this->body["user_id"];
+        }
+
+        else{
+            $cocktail->user_id = $this->user->user_id;
+        }
 
         // Save the customer
         $success = CocktailsService::saveCocktail ($cocktail);
@@ -178,17 +205,22 @@ class CocktailsController extends ControllerBase
 
     // Update a user with data from the URL and body
     private function updateCocktail()
-    {
+    {   
+        $this->requireAuth(["admin"]); 
         $cocktail = new CocktailModel();
 
         // Get ID from the URL
         $id = $this->path_parts[2];
+
+        $existing_cocktail = CocktailsService::getCocktailById($id);
 
         // Get updated properties from the body
         $cocktail->title = $this->body["title"];
         $cocktail->description = $this->body["description"];
         $cocktail->ingredients = $this->body["ingredients"];
         $cocktail->instructions = $this->body["instructions"];
+        $cocktail->image_url = $this->body["image_url"];
+
 
         // Update the customer
         $success = CocktailsService::updateCocktailById($id, $cocktail);
@@ -205,6 +237,7 @@ class CocktailsController extends ControllerBase
     // Delete a user with data from the URL
     private function deleteCocktail()
     {
+        $this->requireAuth(["admin"]); 
 
         // Get ID from the URL
         $id = $this->path_parts[2];

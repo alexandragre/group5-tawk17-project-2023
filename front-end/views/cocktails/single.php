@@ -9,7 +9,7 @@ Template::header($this->model->cocktail_id);
 <div class="overview">
 <div class="cocktail-overview">
 
-<h1 class="c-title"><?= $this->model->title ?></h1>
+<h1 class="c-title"><?= $this->model->cocktail_id ?></h1>
 
 <p>
     <b class="cocktail-txt">Id: <?= $this->model->cocktail_id ?></b>
