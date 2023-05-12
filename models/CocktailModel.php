@@ -14,5 +14,4 @@ class CocktailModel{
     public $ingredients;
     public $instructions;
     public $image_url;
-    public $user_id;
 }
