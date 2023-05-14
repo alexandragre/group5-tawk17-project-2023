@@ -4,12 +4,13 @@ require_once __DIR__ . "/../../Template.php";
 Template::header("Profile");
 ?>
 
-<p>
+<div class="center-container">
+<p class="info">
     Logged in as <b><?= $this->user->username ?></b>
 </p>
 
 <?php if ($this->user->user_setting === "admin") : ?>
-    <p>(admin user)</p>
+    <p class="info">(admin user)</p>
 <?php endif; ?>
 
 <hr>
@@ -32,5 +33,6 @@ Template::header("Profile");
 <form action="<?= $this->home ?>/auth/logout" method="post">
     <input type="submit" value="Log out" class="btn delete-btn">
 </form>
+</div>
 
 <?php Template::footer(); ?>
