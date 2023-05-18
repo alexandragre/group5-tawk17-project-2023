@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/../../Template.php";
-require_once __DIR__ . "/../time-data-access/timeFetcher.php";
+require_once __DIR__ . "/../../timeFetcher.php";
 
 
 Template::header($this->model->cocktail_id);
@@ -22,8 +22,9 @@ Template::header($this->model->cocktail_id);
 </p>
 
 <p>
-    <?$dayOfWeek = getDayOfWeek();
-    echo '<p>$dayOfWeek</p>';?>
+  <?$date = getDayOfWeek();
+     echo '<p>today is: $date</p>'?>
+
 </p>
 
 <p>

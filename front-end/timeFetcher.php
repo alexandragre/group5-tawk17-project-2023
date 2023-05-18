@@ -9,7 +9,7 @@ function getDayOfWeek() {
 
 $currentDate = date('Y-M-D');
 
-$base_url = 'https://timeapi.io/api/Conversion/DayOfTheWeek/$currentDate';
+$base_url = 'https://timeapi.io/api/Conversion/DayOfTheWeek/{date}';
 
 $response = file_get_contents($base_url);
 $data = json_decode($response, true);
@@ -17,10 +17,10 @@ $data = json_decode($response, true);
 // Check if the response was successful
 if ($data['statusCode'] === 200) {
     // Access the day of the week from the response
-    $dayOfWeek = $data['data'];
+    $date = $data['data'];
 
     // Display the day of the week
-    echo "$dayOfWeek";
+    echo "$date";
 } else {
     // Display an error message
     echo "Error: Failed to retrieve data from the API.";

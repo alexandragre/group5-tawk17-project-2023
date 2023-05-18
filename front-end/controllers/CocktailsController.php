@@ -89,6 +89,8 @@ class CocktailsController extends ControllerBase
 
         // Shows the view file customers/single.php
         $this->viewPage("cocktails/single");
+
+        
     }
 
 
