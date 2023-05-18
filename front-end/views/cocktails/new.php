@@ -18,7 +18,11 @@ Template::header("New Cocktail");
 
       <div class="form-right">
         <input class="instructions" type="text" name="instructions" placeholder="Instructions"> <br>
-        <input class="image" type="file" id="img" name="image_url" accept="image/*"> <br>
+        <!--<input class="image" type="file" id="img" name="image_url" accept="image/*"> <br>!-->
+
+      <form action="<?= $this->home ?>/cocktails/drink_image" method="post" enctype="multipart/form-data">
+    <input class="image" type="file" name="drink_image"> <br>
+    <input type="submit" value="Save" class="btn">
         <input type="submit" value="Save" class="btn">    
         </form>
       </div>

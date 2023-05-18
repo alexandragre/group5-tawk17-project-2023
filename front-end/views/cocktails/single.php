@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . "/../../Template.php";
+require_once __DIR__ . "/../time-data-access/timeFetcher.php";
+
 
 Template::header($this->model->cocktail_id);
 ?>
@@ -20,6 +22,11 @@ Template::header($this->model->cocktail_id);
 </p>
 
 <p>
+    <?$dayOfWeek = getDayOfWeek();
+    echo '<p>$dayOfWeek</p>';?>
+</p>
+
+<p>
     <b class="cocktail-txt">Description: <?= $this->model->description ?> </b>
 </p>
 
@@ -34,6 +41,10 @@ Template::header($this->model->cocktail_id);
 
 <div class="img-overview">
 <p>
+<?php if ($this->user->image_url) : ?>
+    <img src="<?= $this->home . $this->user->image_url?>" alt="" width="100">
+<?php endif; ?>
+
 <b><?= $this->model->image_url ?> </b>
 </p>
 
