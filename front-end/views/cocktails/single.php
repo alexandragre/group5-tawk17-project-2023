@@ -22,8 +22,7 @@ Template::header($this->model->cocktail_id);
 </p>
 
 <p>
-<?php getDayOfWeek(); ?>
-
+<b class="cocktail-txt">Title: <?= $this->model->currentDate ?> </b> <!-- Ändra --> 
 </p>
 
 <p>

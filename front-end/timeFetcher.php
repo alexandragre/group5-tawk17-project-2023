@@ -9,7 +9,7 @@ function getDayOfWeek() {
 
 $currentDate = date('Y-M-D');
 
-$base_url = 'https://timeapi.io/api/Conversion/DayOfTheWeek/{date}' . $currentDate;
+$base_url = 'https://timeapi.io/api/Conversion/DayOfTheYear/' . $currentDate;
 
 $response = file_get_contents($base_url);
 $data = json_decode($response, true);
