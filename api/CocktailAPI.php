@@ -132,7 +132,7 @@ class CocktailAPI extends RestAPI
     // by sending it to the DB
     private function putOne($id)
     {
-        $this->requireAuth();
+        $this->requireAuth(["admin"]);
 
         $cocktail = new CocktailModel();
         
