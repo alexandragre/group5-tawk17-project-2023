@@ -260,7 +260,6 @@ class CocktailsController extends ControllerBase
 
     private function addRecipeImg(){
 
-        $this->requireAuth();
         // Check if a file was uploaded
         if (isset($_FILES['drink_image']) && $_FILES['drink_image']['error'] === UPLOAD_ERR_OK) {
 
@@ -279,11 +278,10 @@ class CocktailsController extends ControllerBase
             $x = move_uploaded_file($_FILES['drink_image']['tmp_name'], $file_path);
 
             // Get the URL path to the uploaded file
-            $url_path = '/assets/img/drinks/' . $unique_filename;
+            $url_path = '/../assets/img/drinks/' . $unique_filename;
 
             // You can now save the URL path to the database or use it in your application as needed
-            $cocktail_id = $this->path_parts[2];
-            $cocktail_id = $this->body["cocktail_id"];
+            $cocktail_id = $this->body["cocktails_id"];
 
             $cocktail = CocktailsService::updateCocktailById($cocktail_id);
             $cocktail->image_url = $url_path;

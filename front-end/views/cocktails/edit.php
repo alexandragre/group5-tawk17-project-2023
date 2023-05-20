@@ -24,7 +24,7 @@ Template::header("Edit " . $this->model->title);
     <input type="submit" value="Save" class="save-btn">  
   </form>
 
-  <form action="<?= $this->home ?>/cocktails/<?= $this->model->cocktail_id ?>/drink_image" method="post" enctype="multipart/form-data">
+  <form action="<?= $this->home ?>/cocktails/drink_image" method="post" enctype="multipart/form-data">
     <input class="image" type="file" name="drink_image"> <br>
     <input type="submit" value="Save" class="btn">
         </form>
