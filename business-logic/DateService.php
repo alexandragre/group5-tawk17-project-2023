@@ -11,9 +11,9 @@ class DateService{
 
     // Fetches date from the API
     public static function getTime(){
-        $exchange_rate_fetcher = new DateFetcher();
+        $date_fetcher = new DateFetcher();
 
-        $currencies = $exchange_rate_fetcher->fetchCurrencies();
+        $date = $date_fetcher->fetchDate();
 
         return $date;
     }
