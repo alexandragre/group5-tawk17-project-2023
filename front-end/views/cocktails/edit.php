@@ -17,19 +17,16 @@ Template::header("Edit " . $this->model->title);
 
       <div class="form-right">
       <input class="instructions" type="text" name="instructions" value="<?= $this->model->instructions ?>" placeholder="Instructions"> <br>
-    <input class="image" type="file" id="img" name="image_url" accept="image/*"value="<?= $this->model->image_url ?>" placeholder="image"> <br>
-   
-        
+
     <input type="number" name="user_id" value="<?= $this->model->user_id ?>" placeholder="User ID"> <br>
-    <input type="submit" value="Save" class="save-btn">  
   </form>
 
-  <form action="<?= $this->home ?>/cocktails/drink_image" method="post" enctype="multipart/form-data">
+  <form action="<?= $this->home ?>/cocktails/" method="post" enctype="multipart/form-data">
     <input class="image" type="file" name="drink_image"> <br>
     <input type="submit" value="Save" class="btn">
         </form>
 
-    <form action="<?= $this->home ?>/cocktails/<?= $this->model->cocktail_id ?>/delete" method="post">
+    <form action="<?= $this->home ?>/cocktails/single<?= $this->model->cocktail_id ?>/delete" method="post">
     <input type="submit" value="Delete" class="delete-btn">
 
         </form>

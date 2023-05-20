@@ -46,11 +46,7 @@ class Template
             </nav>
             <main>
 
-                <?php if ($error) : ?>
-                    <div class="error">
-                        <p><?= $error ?></p>
-                    </div>
-                <?php endif; ?> 
+               
        
     <?php }
     
