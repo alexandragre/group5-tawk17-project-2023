@@ -281,9 +281,11 @@ class CocktailsController extends ControllerBase
             $url_path = '/assets/img/drinks/' . $unique_filename;
 
             // You can now save the URL path to the database or use it in your application as needed
-            $this->user->image_url = $url_path;
+            $cocktail_id = $this->path_parts[2];
 
-            UsersService::updateUser($this->body->cocktail_id, $this->cocktail);
+            $cocktail = CocktailsService::updateCocktailById($cocktail_id);
+            $cocktail->image_url = $url_path;
+            CocktailsService::updateCocktailById($cocktail_id, $cocktail);
 
             // Redirect to the profile page or display a success message
             $this->redirect($this->home . "/cocktails/single");
