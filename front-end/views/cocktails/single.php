@@ -2,6 +2,7 @@
 require_once __DIR__ . "/../../Template.php";
 
 
+
 Template::header($this->model->cocktail_id);
 ?>
 
@@ -21,7 +22,7 @@ Template::header($this->model->cocktail_id);
 </p>
 
 <p>
-<b class="cocktail-txt">Title: <?= $this->model->date ?> </b> <!-- Ändra --> 
+<b class="cocktail-txt">Title: <?= $this->model->currentDate ?> </b> <!-- Ändra --> 
 </p>
 
 <p>
