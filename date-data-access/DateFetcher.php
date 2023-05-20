@@ -6,13 +6,13 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
 }
 
 class DateFetcher {
-
     $currentDate = date('Y-M-D');
-    private $base_url = "https://timeapi.io/api/Conversion/DayOfTheYear/ . $currentDate";
-    
+
+    private $base_url = "https://timeapi.io/api/Conversion/DayOfTheYear/";
+
     // Fetches all available currencies from the API
     function fetchDate(){
-
+                
         // Construct the URL for the API request using the base URL
         $url = $this->base_url;
       
