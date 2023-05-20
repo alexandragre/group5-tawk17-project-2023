@@ -22,6 +22,12 @@ Template::header($this->model->cocktail_id);
 </p>
 
 <p>
+
+<b class="cocktail-txt">time<?= $this->model->currentDate ?> </b>
+
+</p>
+
+<p>
     <b class="cocktail-txt">Ingredients: <?= $this->model->ingredients ?> </b>
 </p>
 
