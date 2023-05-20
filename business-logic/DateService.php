@@ -10,7 +10,7 @@ require_once __DIR__ . "/../date-data-access/DateFetcher.php";
 class DateService{
 
     // Fetches date from the API
-    public static function getTime(){
+    public static function getDate(){
         $date_fetcher = new DateFetcher();
 
         $date = $date_fetcher->fetchDate();

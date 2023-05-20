@@ -21,7 +21,7 @@ Template::header($this->model->cocktail_id);
 </p>
 
 <p>
-<b class="cocktail-txt">Title: <?= $this->model->currentDate ?> </b> <!-- Ändra --> 
+<b class="cocktail-txt">Title: <?= $this->model->date ?> </b> <!-- Ändra --> 
 </p>
 
 <p>
@@ -39,7 +39,7 @@ Template::header($this->model->cocktail_id);
 
 <div class="img-overview">
 <p>
-<b><?= $this->body->image_url ?> </b>
+<b><?= $this->model->image_url ?> </b>
 </p>
 
 <?php if ($this->user->user_setting === "admin") : ?>

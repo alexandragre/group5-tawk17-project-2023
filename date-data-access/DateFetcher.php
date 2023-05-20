@@ -12,6 +12,7 @@ class DateFetcher {
     
     // Fetches all available currencies from the API
     function fetchDate(){
+
         // Construct the URL for the API request using the base URL
         $url = $this->base_url;
       
