@@ -18,10 +18,6 @@ Template::header($this->model->cocktail_id);
 </p>
 
 <p>
-<b class="cocktail-txt">Title: <?= $this->model->currentDate ?> </b> <!-- Ändra --> 
-</p>
-
-<p>
     <b class="cocktail-txt">Description: <?= $this->model->description ?> </b>
 </p>
 
