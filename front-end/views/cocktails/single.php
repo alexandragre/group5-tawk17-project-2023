@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . "/../../Template.php";
-require_once __DIR__ . "/../../timeFetcher.php";
 
 
 Template::header($this->model->cocktail_id);
@@ -40,11 +39,7 @@ Template::header($this->model->cocktail_id);
 
 <div class="img-overview">
 <p>
-<?php if ($this->user->image_url) : ?>
-    <img src="<?= $this->home . $this->user->image_url?>" alt="" width="100">
-<?php endif; ?>
-
-<b><?= $this->model->image_url ?> </b>
+<b><?= $this->body->image_url ?> </b>
 </p>
 
 <?php if ($this->user->user_setting === "admin") : ?>

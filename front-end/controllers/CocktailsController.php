@@ -282,6 +282,7 @@ class CocktailsController extends ControllerBase
 
             // You can now save the URL path to the database or use it in your application as needed
             $cocktail_id = $this->path_parts[2];
+            $cocktail_id = $this->body["cocktail_id"];
 
             $cocktail = CocktailsService::updateCocktailById($cocktail_id);
             $cocktail->image_url = $url_path;
