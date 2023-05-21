@@ -7,6 +7,7 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
 
 require_once __DIR__ . "/../ControllerBase.php";
 require_once __DIR__ . "/../../business-logic/CocktailsService.php";
+require_once __DIR__ . "/../../business-logic/DateService.php";
 
 // Class for handling requests to "home/Customer"
 
@@ -84,12 +85,17 @@ class CocktailsController extends ControllerBase
         // Get the customer with the ID from the URL
         $cocktail = $this->getCocktail();
 
+        
+        
+        
+        
+        
         // $this->model is used for sending data to the view
         $this->model = $cocktail;
 
-        
+
         // Shows the view file customers/single.php
-        $this->viewPage("cocktails/single");
+       $this->viewPage("cocktails/single");
 
         
     }
@@ -136,7 +142,7 @@ class CocktailsController extends ControllerBase
         if (!$cocktail) {
             $this->notFound();
         }
-        if ($this->user->user_setting !== "admin" && $cocktail->user_id !== $this->user_id){
+        if ($this->user->user_setting !== "admin" && $cocktail->user_id !== $this->user->user_id){
             $this->forbidden();
         }
 

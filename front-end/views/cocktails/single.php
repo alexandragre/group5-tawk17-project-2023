@@ -25,6 +25,7 @@ Template::header($this->model->cocktail_id);
 
 <b class="cocktail-txt">time<?= $currentDate ?> </b>
 
+
 </p>
 
 <p>
