@@ -26,7 +26,7 @@ Template::header("Edit " . $this->model->title);
     <input type="submit" value="Save" class="btn">
         </form>
 
-    <form action="<?= $this->home ?>/cocktails/single<?= $this->model->cocktail_id ?>/delete" method="post">
+    <form action="<?= $this->home ?>/cocktails/<?= $this->model->cocktail_id ?>/delete" method="post">
     <input type="submit" value="Delete" class="delete-btn">
 
         </form>
