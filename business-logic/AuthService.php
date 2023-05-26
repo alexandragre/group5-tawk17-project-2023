@@ -1,4 +1,7 @@
 <?php
+// authservice is used for authentification 
+//front-end that will call auth service whenever that layer api/fronend needs to check 
+// if a user is logged in / correct / make changes
 
 // Check for a defined constant or specific file inclusion
 if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {

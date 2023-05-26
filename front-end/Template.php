@@ -24,9 +24,8 @@ class Template
 
             <nav class="navigation">
                 <ul>
-                <li class="icon-"><a href="home.php" class="sipper-logo">Sipper</a></li>
+                <li class="icon-"><a href="home" class="sipper-logo">Sipper</a></li>
                 <li class="icon-con1"><a href="<?= $home_path ?>">Start</a>
-                <li class="icon-con2"><a href="<?= $home_path ?>/cocktails">Cocktails</a></li>
                 </ul>
             </nav>
             <main>

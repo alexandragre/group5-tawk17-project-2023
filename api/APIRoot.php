@@ -1,4 +1,6 @@
 <?php
+// this code represents a PHP script that is part of an API implementation
+// the code sets up a class for handling requests to the "api/"
 
 // Check for a defined constant or specific file inclusion
 if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
