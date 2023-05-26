@@ -65,11 +65,11 @@ class CocktailsDatabase extends Database
     // Create one by creating a query and using the inherited $this->conn 
     public function insert(CocktailModel $cocktail)
     {
-        $query = "INSERT INTO cocktails (title, description, ingredients, instructions, image_url) VALUES (?, ?, ?, ?, ?)";
+        $query = "INSERT INTO cocktails (title, description, ingredients, instructions, image_url, user_id) VALUES (?, ?, ?, ?, ?, ?)";
 
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bind_param("sssss", $cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url);
+        $stmt->bind_param("sssssi", $cocktail->title, $cocktail->description, $cocktail->ingredients, $cocktail->instructions, $cocktail->image_url, $cocktail->user_id);
 
         $success = $stmt->execute();
 

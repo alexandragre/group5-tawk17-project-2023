@@ -67,6 +67,7 @@ class CocktailsController extends ControllerBase
            $cocktails = CocktailsService::getAllCocktails();
        } else {
            $cocktails = CocktailsService::getCocktailsByUser($this->user->user_id);
+           var_dump($cocktails);
        }
 
 

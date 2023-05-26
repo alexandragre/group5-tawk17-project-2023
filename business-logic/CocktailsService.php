@@ -46,7 +46,7 @@ class CocktailsService{
 
         $cocktails = $cocktails_database->getByUserId($user_id);
 
-        return $purchases;
+        return $cocktails;
     }
 
     // Save a customer to the database by creating a database object 
