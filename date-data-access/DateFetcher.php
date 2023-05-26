@@ -6,26 +6,47 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
 }
 
 class DateFetcher {
-
+    
     //$currentDate = date("Y-m-d");
     private $base_url = "https://timeapi.io/api/Conversion/DayOfTheYear/";
     
     // Fetches all available currencies from the API
-    function fetchDate($YearMonthDay){
+    function fetchDate(){
+
+        $date = date('Y-m-d');
+
         // Construct the URL for the API request using the base URL
-        $url = $this->base_url . $YearMonthDay;
+        $url = $this->base_url . $date;
       
         // Fetch the data from the API using the constructed URL
         $data = file_get_contents($url);
       
+        // Decode the JSON data
+        // The "true" argument to json_decode returns an associative array instead of an object
+        $currentDate = json_decode($data, true);
       
         // Return the currency codes to the caller
-        return json_decode($data, true);
+        return $currentDate['day'];
     }
-
-    public function getSpecficDate()
 }
 
-$currentDate = DateService::getDate();
+ //$currentDate = date("Y-m-d");
+ //private $base_url = "https://timeapi.io/api/Conversion/DayOfTheYear/";
+    
+ // Fetches all available currencies from the API
+ //function fetchDate($YearMonthDay){
+     // Construct the URL for the API request using the base URL
+    // $url = $this->base_url . $YearMonthDay;
+   
+     // Fetch the data from the API using the constructed URL
+   //  $data = file_get_contents($url);
+   
+     // Return the currency codes to the caller
+  //   return json_decode($data, true);
+ //}
+
+//}
+
+//$currentDate = DateService::getDate();
 
 ?>

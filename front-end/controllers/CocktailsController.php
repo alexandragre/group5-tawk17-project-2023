@@ -86,11 +86,10 @@ class CocktailsController extends ControllerBase
         $cocktail = $this->getCocktail();
 
         
-        
-        
-        
         // $this->model is used for sending data to the view
-        $this->model = $cocktail;
+        $this->model['cocktail'] = $cocktail;
+
+        $this->model['day'] = DateService::getDate();
 
 
         // Shows the view file customers/single.php
