@@ -8,7 +8,7 @@ if (!defined('MY_APP') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) 
 class DateFetcher {
 
     //$currentDate = date("Y-m-d");
-    private $base_url = "https://timeapi.io/api/Conversion/DayOfTheYear/{date}";
+    private $base_url = "https://timeapi.io/api/Conversion/DayOfTheYear/";
     
     // Fetches all available currencies from the API
     function fetchDate(){

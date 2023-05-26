@@ -89,7 +89,6 @@ class CocktailsController extends ControllerBase
         
         
         
-        
         // $this->model is used for sending data to the view
         $this->model = $cocktail;
 
