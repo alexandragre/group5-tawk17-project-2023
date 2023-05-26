@@ -11,20 +11,19 @@ class DateFetcher {
     private $base_url = "https://timeapi.io/api/Conversion/DayOfTheYear/";
     
     // Fetches all available currencies from the API
-    function fetchDate(){
+    function fetchDate($YearMonthDay){
         // Construct the URL for the API request using the base URL
-        $url = $this->base_url . "currentDate.json";
+        $url = $this->base_url . $YearMonthDay;
       
         // Fetch the data from the API using the constructed URL
         $data = file_get_contents($url);
       
-        // Decode the JSON data
-        // The "true" argument to json_decode returns an associative array instead of an object
-        $currentDate = json_decode($data, true);
       
         // Return the currency codes to the caller
-        return $currentDate['date'];
+        return json_decode($data, true);
     }
+
+    public function getSpecficDate()
 }
 
 $currentDate = DateService::getDate();

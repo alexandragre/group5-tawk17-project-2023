@@ -23,7 +23,7 @@ Template::header($this->model->cocktail_id);
 
 <p>
 
-<b class="cocktail-txt">time<?= $currentDate ?> </b>
+<b class="cocktail-txt">time<?= $YearMonthDay ?> </b>
 
 
 </p>
