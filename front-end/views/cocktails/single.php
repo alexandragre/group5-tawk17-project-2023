@@ -9,7 +9,7 @@ Template::header($this->model['cocktail']->cocktail_id);
 <div class="landing-page">
 
 <div class="overview">
-<div class="cocktail-overview">
+<div class="cocktail-overview-one">
 
 <h1 class="c-title"><?= $this->model['cocktail']->title ?></h1>
 
@@ -37,17 +37,8 @@ Template::header($this->model['cocktail']->cocktail_id);
 </p>
 </div>
 
-<div class="img-overview">
-
-<img src="img/drinks/<?= $this->model['cocktail']->image_url?>" alt="" height="100" width="100">
-</div>
-
 <?php if ($this->user->user_setting === "admin") : ?>
 
-<p>
-    <b>User ID: </b>
-    <?= $this->model['cocktail']->user_id ?>
-</p>
 
 <?php endif; ?>
 
