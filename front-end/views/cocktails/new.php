@@ -11,7 +11,7 @@ Template::header("New Cocktail");
       <div class="form-left">
         <h1 class="big-h">CREATE A <br> NEW RECIPE..</h1>
         <form action="<?= $this->home ?>/cocktails" method="POST" name="AddForm" onsubmit="return validateForm()">
-        <input id="myInput" class="title" type="text" name="title" placeholder="Title" maxlenght="423288"> <br>
+        <input class="title" type="text" name="title" placeholder="Title"> <br>
         <input class="description" type="text" name="description" placeholder="Description"> <br>
         <input class="ingredients" type="text" name="ingredients" placeholder="Ingredients"> <br>
       </div>

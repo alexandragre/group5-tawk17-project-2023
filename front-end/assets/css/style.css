@@ -391,8 +391,9 @@ input{
     width: 100%;
     font-size: 15px;
     margin-top: 20px;
-    flex-flow: row wrap;
-    margin: 0 -1rem 1rem -1rem;
+}
+input[text=type]{
+    width: 100% !important;
 }
 .title{
     padding: 15px 275px 15px 20px;
