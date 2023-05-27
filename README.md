@@ -1,6 +1,6 @@
 # Cocktail recipe website
 
-With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game. Find and create new recipes!
+With an extensive database of drink recipes, Sipper is the ultimate location for cocktail enthusiasts and those looking to up their drink game. 
 
 The project is a drink recipe website where users can browse and share recipes for a variety of cocktails and mocktails. The website has a user-friendly interface.
 The website features multiple sections, including:
@@ -47,7 +47,7 @@ Week 2:
 •	Develop the core features for adding, editing, and deleting cocktail recipes.
 
 Week 3:
-•	Implement search functionality, allowing users to perform CRUD operations
+•	Implement functionality, allowing users to perform CRUD operations
 
 Week 4:
 •	Enhance the application's design and user interface.
@@ -55,6 +55,7 @@ Week 4:
 
 Week 5:
 •	Integrate external APIs to fetch day of the year.
+•	Enhance the application's design and user interface.
 •	Perform thorough testing and address any bugs or issues.
 
 Week 6:
