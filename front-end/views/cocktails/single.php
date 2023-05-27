@@ -23,7 +23,7 @@ Template::header($this->model['cocktail']->cocktail_id);
 
 <p>
 
-<b class="cocktail-txt">Day<?= $this->model['day'] ?> </b>
+<b class="cocktail-txt">Day of the year: <?= $this->model['day'] ?> </b>
 
 
 </p>

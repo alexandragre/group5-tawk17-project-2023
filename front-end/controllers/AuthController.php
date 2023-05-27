@@ -86,10 +86,7 @@ class AuthController extends ControllerBase
             $this->logoutUser();
         }
 
-        // POST: /home/auth/profile_pic
-        else if ($this->path_count == 3 && $this->path_parts[2] == "profile_pic") {
-            $this->addProfilePicture();
-        }
+        
 
         // Show "404 not found" if the path is invalid
         else {
