@@ -388,12 +388,8 @@ input{
     border-color: rgba(210,207,198,1);
     border-radius: 10px;
     border-style: solid;
-    width: 100%;
     font-size: 15px;
     margin-top: 20px;
-}
-input[text=type]{
-    width: 100% !important;
 }
 .title{
     padding: 15px 275px 15px 20px;
