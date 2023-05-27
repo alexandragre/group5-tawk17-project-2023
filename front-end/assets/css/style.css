@@ -388,8 +388,11 @@ input{
     border-color: rgba(210,207,198,1);
     border-radius: 10px;
     border-style: solid;
+    width: 100%;
     font-size: 15px;
     margin-top: 20px;
+    flex-flow: row wrap;
+    margin: 0 -1rem 1rem -1rem;
 }
 .title{
     padding: 15px 275px 15px 20px;
