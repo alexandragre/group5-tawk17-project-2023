@@ -82,7 +82,7 @@ Considering this experience, there are a number of actions we would take differe
 
 2. Implementing Input Validation: We would increase the system's dependability by putting in place extensive input validation procedures because we understand how important data integrity is. We would increase the application's general resilience and accuracy by making sure that inputs cannot be left empty or contain inaccurate data.
 
-3. Addressing CSS flaws on Input Fields: We would allot time to fix any current CSS inconsistencies or flaws on the input fields as part of our commitment to delivering a polished and aesthetically pleasing experience. The styling of these components might be improved to produce a more unified and aesthetically pleasing design, improving the application's overall professionalism and usefulness.
+3. Addressing CSS flaws on Input Fields: We would allow time to fix any current CSS inconsistencies or flaws on the input fields as part of our commitment to delivering a polished and aesthetically pleasing experience. The styling of these components might be improved to produce a more unified and aesthetically pleasing design, improving the application's overall professionalism and usefulness.
 
 By incorporating these improvements, we would demonstrate our dedication to continuous enhancement and refinement, resulting in a more comprehensive and user-centric solution.
 
